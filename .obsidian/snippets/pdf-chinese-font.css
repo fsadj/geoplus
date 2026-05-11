@@ -1,0 +1,31 @@
+/* Obsidian PDF Export — Chinese (CJK) font fix for macOS 26
+
+   BACKGROUND: PingFang SC is registered in CoreText but the .ttc file
+   may be in a macOS 26 on-demand asset location. StHeiti is confirmed
+   on disk at /System/Library/Fonts/STHeiti Medium.ttc and successfully
+   embeds CJK glyphs in Chrome-headless PDF output.                 */
+
+/* ── Approach 1: @media print (triggers during PDF export) ── */
+@media print {
+  body, .markdown-preview-view, .markdown-preview-sizer {
+    font-family: "STHeiti", "Heiti SC", "Hiragino Sans GB", "Arial Unicode MS", sans-serif !important;
+  }
+  .cm-header, h1, h2, h3, h4, h5, h6, strong, b {
+    font-family: "STHeiti", "Heiti SC", "Hiragino Sans GB", "Arial Unicode MS", sans-serif !important;
+  }
+  code, pre, .cm-inline-code, .HyperMD-codeblock {
+    font-family: "SF Mono", "Menlo", "Monaco", "Courier New", monospace !important;
+  }
+}
+
+/* ── Approach 2: Direct (fallback if print media query is ignored) ── */
+.markdown-preview-view,
+.markdown-preview-view p,
+.markdown-preview-view li,
+.markdown-preview-view td,
+.markdown-preview-view th,
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3 {
+  font-family: "STHeiti", "Heiti SC", "Hiragino Sans GB", "Arial Unicode MS", sans-serif;
+}
