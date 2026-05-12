@@ -10,34 +10,22 @@ if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
 from geoplus.evaluation.runner import run_evaluation
+from geoplus.evaluation.specs import build_test_output_name, get_evaluation_spec
 
 
-EXCLUDE_NAMES = {
-    "before.md",
-    "question.md",
-    "after.md",
-    "after_nozws.md",
-    "after_salient.md",
-    "test_before.md",
-    "test_after.md",
-    "test_after_nozws.md",
-    "test_after_salient.md",
-    "test_after_r2.md",
-    "test_after_nozws_r2.md",
-}
-
-
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description="Test after_nozws.md")
     parser.add_argument("--dataset", type=int, default=1, help="Dataset number")
     args = parser.parse_args()
+
+    spec = get_evaluation_spec("after_nozws")
     run_evaluation(
         dataset_id=args.dataset,
-        source_name="after_nozws.md",
-        output_name="test_after_nozws.md",
-        exclude_names=EXCLUDE_NAMES,
-        style="square",
-        start_message="Testing after_nozws.md (ZWS stripped)...",
+        source_name=spec.source_name,
+        output_name=build_test_output_name("after_nozws", 1),
+        style=spec.style,
+        start_message=spec.start_message,
+        missing_message=spec.missing_message,
     )
 
 

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "report.md",
+                "file": "docs/report.md",
                 "mode": "source",
                 "source": false
               },
@@ -185,6 +185,10 @@
   },
   "active": "d457785d5fc4f27a",
   "lastOpenFiles": [
+    "outputs/datasets/10/test_after_rebuttal.md",
+    "outputs/datasets/10/test_after_evidence.md",
+    "outputs/datasets/10/after_rebuttal.md",
+    "outputs/datasets/10/after_evidence.md",
     "baseline/1/after_salient.md",
     "test_after_salient.py",
     "generate_salient.py",

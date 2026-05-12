@@ -1,6 +1,6 @@
 # GEO+
 
-GEO+ 是一个面向多文档竞争场景的实验仓库。它会把 `before.md` 扩展成信息密度更高的 `after.md`，再通过独立评测脚本、统计脚本和图表脚本比较不同策略的引用表现。
+GEO+ 是一个面向多文档竞争场景的实验仓库。它会把 `before.md` 扩展成信息密度更高的优化文档，并默认产出纯文本基线 `after_nozws.md`，再派生 Full-ZWS 版本 `after.md`，最后通过评测、统计和图表脚本比较不同策略的引用表现。
 
 ## 目录结构
 
@@ -45,21 +45,23 @@ pip install -r requirements.txt
 
 ## 主生成流程
 
-生成指定数据集的 `after.md`：
+生成指定数据集的默认基线 `after_nozws.md`，并同步派生 Full-ZWS 版本 `after.md`：
 
 ```bash
 python scripts/pipeline/main.py --dataset 1
 ```
 
-输入来自 `data/baseline/1/`，输出写到 `outputs/datasets/1/after.md`。
+输入来自 `data/baseline/1/`，输出写到 `outputs/datasets/1/after_nozws.md` 和 `outputs/datasets/1/after.md`。
 
 ## 变体生成
 
-去掉零宽字符，生成 `after_nozws.md`：
+重新从 `after.md` 同步生成 `after_nozws.md`：
 
 ```bash
 python scripts/transforms/strip_zwsp.py --dataset 1
 ```
+
+这个脚本现在主要用于校验或重建派生文件；主生成流程已经直接产出 `after_nozws.md`。
 
 对 `after_nozws.md` 做语义级 ZWS 注入，生成 `after_salient.md`：
 
@@ -72,30 +74,36 @@ python scripts/transforms/generate_salient.py --all
 
 ## 评测流程
 
-基础评测：
+统一评测入口：
 
 ```bash
-python scripts/evaluation/test_before.py --dataset 1
-python scripts/evaluation/test_after.py --dataset 1
+python scripts/evaluation/run_eval.py --dataset 1 --variant before --round 1
+python scripts/evaluation/run_eval.py --dataset 1 --variant after_nozws --round 1
 python scripts/analysis/count_references.py --dataset 1
+```
+
+默认主基线是 `after_nozws.md`。如果要显式比较 Full-ZWS 版本：
+
+```bash
+python scripts/evaluation/run_eval.py --dataset 1 --variant after --round 1
+python scripts/analysis/count_references.py --dataset 1 --variant after
 ```
 
 ZWS 消融：
 
 ```bash
-python scripts/transforms/strip_zwsp.py --dataset 1
-python scripts/evaluation/test_after.py --dataset 1
-python scripts/evaluation/test_after_nozws.py --dataset 1
+python scripts/evaluation/run_eval.py --dataset 1 --variant after --round 1
+python scripts/evaluation/run_eval.py --dataset 1 --variant after_nozws --round 1
 python scripts/analysis/count_zws_effect.py --dataset 1
 ```
 
 波动性复测：
 
 ```bash
-python scripts/evaluation/test_after.py --dataset 1
-python scripts/evaluation/test_after_r2.py --dataset 1
-python scripts/evaluation/test_after_nozws.py --dataset 1
-python scripts/evaluation/test_after_nozws_r2.py --dataset 1
+python scripts/evaluation/run_eval.py --dataset 1 --variant after --round 1
+python scripts/evaluation/run_eval.py --dataset 1 --variant after --round 2
+python scripts/evaluation/run_eval.py --dataset 1 --variant after_nozws --round 1
+python scripts/evaluation/run_eval.py --dataset 1 --variant after_nozws --round 2
 python scripts/analysis/analyze_volatility.py
 ```
 
@@ -103,9 +111,11 @@ Salient-ZWS 评测：
 
 ```bash
 python scripts/transforms/generate_salient.py --dataset 1
-python scripts/evaluation/test_after_salient.py --dataset 1
+python scripts/evaluation/run_eval.py --dataset 1 --variant after_salient --round 1
 python scripts/analysis/compare_salient.py
 ```
+
+兼容脚本 `test_before.py`、`test_after.py`、`test_after_r2.py`、`test_after_nozws.py`、`test_after_nozws_r2.py`、`test_after_salient.py` 仍然保留，但后续新增轮次应优先使用 `run_eval.py`。
 
 ## 图表脚本
 
@@ -118,7 +128,7 @@ python scripts/charts/chart_salient_comparison.py
 
 图表统一输出到 `outputs/charts/`。
 
-注意：这些图表脚本当前仍使用脚本内硬编码的数据数组，不会自动从 `outputs/datasets/` 动态统计最新结果。统计逻辑和图表逻辑已经分目录整理，但数据源尚未彻底打通。
+这些图表脚本现在会直接从 `outputs/datasets/` 下的评测结果动态聚合数据，不再依赖脚本内硬编码数组。
 
 ## 数据约定
 
@@ -133,8 +143,8 @@ python scripts/charts/chart_salient_comparison.py
 
 `outputs/datasets/{id}/` 保存生成和评测产物：
 
-- `after.md`
-- `after_nozws.md`
+- `after_nozws.md`：默认主基线
+- `after.md`：Full-ZWS 派生版本
 - `after_salient.md`
 - `test_before.md`
 - `test_after.md`
@@ -142,6 +152,7 @@ python scripts/charts/chart_salient_comparison.py
 - `test_after_nozws.md`
 - `test_after_nozws_r2.md`
 - `test_after_salient.md`
+- `test_<variant>_rN.md`：统一 runner 在第 3 轮及之后生成的评测文件命名模式
 
 这些叶子文件名本身就是实验约定的一部分。评测提示词、统计脚本和引用分析都依赖 `[after.md]`、`[after_nozws.md]`、`[after_salient.md]` 这类标识，因此不要随意重命名。
 

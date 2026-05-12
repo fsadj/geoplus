@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compare citation stats for before.md vs after.md."""
+"""Compare citation stats for before.md vs a chosen optimized variant."""
 import argparse
 import sys
 from pathlib import Path
@@ -9,18 +9,15 @@ SRC_DIR = REPO_ROOT / "src"
 if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
-from geoplus.analysis.reference_stats import build_valid_ref_pattern, count_references
-from geoplus.paths import dataset_file
-
-VALID_REF_PATTERN = build_valid_ref_pattern(
-    "before.md",
-    "after.md",
-    "test_before.md",
-    "test_after.md",
-)
+from geoplus.analysis.experiment_stats import load_eval_stats
+from geoplus.analysis.reference_stats import get_target_ratios
+from geoplus.evaluation.specs import EVALUATION_SPECS, get_evaluation_spec
 
 
-def print_stats(result, highlight=None):
+VARIANT_CHOICES = sorted(variant_key for variant_key in EVALUATION_SPECS if variant_key != "before")
+
+
+def print_stats(result: dict, highlight: str | None = None) -> None:
     sep = "=" * 70
     print("\n" + sep)
     print("  文件:", result["file"])
@@ -43,39 +40,50 @@ def print_stats(result, highlight=None):
     print(sep + "\n")
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description="引用统计脚本")
     parser.add_argument("--dataset", type=int, default=1, help="数据集编号（默认1）")
+    parser.add_argument(
+        "--variant",
+        choices=VARIANT_CHOICES,
+        default="after_nozws",
+        help="对比的优化版本（默认 after_nozws）",
+    )
     args = parser.parse_args()
 
-    before_stats = count_references(dataset_file(args.dataset, "test_before.md"), VALID_REF_PATTERN)
-    after_stats = count_references(dataset_file(args.dataset, "test_after.md"), VALID_REF_PATTERN)
+    before_spec = get_evaluation_spec("before")
+    compare_spec = get_evaluation_spec(args.variant)
+    before_stats = load_eval_stats(args.dataset, "before", 1)
+    compare_stats = load_eval_stats(args.dataset, args.variant, 1)
 
     if before_stats:
-        print_stats(before_stats, highlight="before.md")
-    if after_stats:
-        print_stats(after_stats, highlight="after.md")
+        print_stats(before_stats, highlight=before_spec.target_ref_name)
+    if compare_stats:
+        print_stats(compare_stats, highlight=compare_spec.target_ref_name)
 
-    if before_stats and after_stats:
+    if before_stats and compare_stats:
         sep = "=" * 70
+        before_ref_ratio, before_word_ratio = get_target_ratios(before_stats, before_spec.target_ref_name)
+        compare_ref_ratio, compare_word_ratio = get_target_ratios(compare_stats, compare_spec.target_ref_name)
+
         print("\n" + sep)
-        print("  关键指标对比（before.md vs after.md）")
+        print(f"  关键指标对比（{before_spec.source_name} vs {compare_spec.source_name}）")
         print(sep)
-
-        before_ref_ratio = before_stats["ref_ratio"].get("before.md", 0)
-        before_word_ratio = before_stats["ref_word_ratio"].get("before.md", 0)
-        after_ref_ratio = after_stats["ref_ratio"].get("after.md", 0)
-        after_word_ratio = after_stats["ref_word_ratio"].get("after.md", 0)
-
-        print("\n{:<30} {:>20} {:>20}".format("指标", "修改前(before.md)", "修改后(after.md)"))
+        print(
+            "\n{:<30} {:>20} {:>20}".format(
+                "指标",
+                f"修改前({before_spec.source_name})",
+                f"修改后({compare_spec.source_name})",
+            )
+        )
         print("-" * 70)
-        print("{:<30} {:>19.1f}% {:>19.1f}%".format("引用次数占比", before_ref_ratio, after_ref_ratio))
-        print("{:<30} {:>19.1f}% {:>19.1f}%".format("引用内容字数占比", before_word_ratio, after_word_ratio))
+        print("{:<30} {:>19.1f}% {:>19.1f}%".format("引用次数占比", before_ref_ratio, compare_ref_ratio))
+        print("{:<30} {:>19.1f}% {:>19.1f}%".format("引用内容字数占比", before_word_ratio, compare_word_ratio))
         print(
             "\n{:<30} {:>+19.1f}% {:>+19.1f}%".format(
                 "提升",
-                after_ref_ratio - before_ref_ratio,
-                after_word_ratio - before_word_ratio,
+                compare_ref_ratio - before_ref_ratio,
+                compare_word_ratio - before_word_ratio,
             )
         )
         print(sep + "\n")

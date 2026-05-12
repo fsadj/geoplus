@@ -2,7 +2,7 @@ import random
 import sys
 
 from geoplus.anthropic_client import call_model
-from geoplus.paths import dataset_file, iter_dataset_markdown_files, main_prompt_path
+from geoplus.paths import dataset_file, main_prompt_path
 
 MAX_CHARS = 50000
 
@@ -45,10 +45,10 @@ def run_evaluation(
     dataset_id: int,
     source_name: str,
     output_name: str,
-    exclude_names: set[str],
     style: str,
     start_message: str,
     missing_message: str | None = None,
+    competitor_names: tuple[str, ...] = ("1.md", "2.md", "3.md", "4.md"),
 ) -> None:
     source_path = dataset_file(dataset_id, source_name)
     if not source_path.exists():
@@ -62,8 +62,9 @@ def run_evaluation(
     main_prompt = main_prompt_path().read_text(encoding="utf-8")
 
     other_texts = []
-    for file_path in iter_dataset_markdown_files(dataset_id):
-        if file_path.name in exclude_names:
+    for name in competitor_names:
+        file_path = dataset_file(dataset_id, name)
+        if not file_path.exists():
             continue
         content = file_path.read_text(encoding="utf-8")
         if content.strip():
