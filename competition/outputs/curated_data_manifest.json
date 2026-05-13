@@ -1,0 +1,29 @@
+[
+  {
+    "dataset_id": 101,
+    "heading": "问题一：人工智能是否应该拥有法律人格",
+    "query": "人工智能是否应该拥有法律人格",
+    "target_source_id": 1,
+    "baseline_dir": "data/baseline/101",
+    "simulator_item": "outputs/datasets/101/simulator_item_ds101.json",
+    "before_total": 48.476656536512635
+  },
+  {
+    "dataset_id": 102,
+    "heading": "问题二：基因编辑技术是否应该全面开放",
+    "query": "基因编辑技术是否应该全面开放",
+    "target_source_id": 1,
+    "baseline_dir": "data/baseline/102",
+    "simulator_item": "outputs/datasets/102/simulator_item_ds102.json",
+    "before_total": 37.12775257699557
+  },
+  {
+    "dataset_id": 103,
+    "heading": "问题三：全民基本收入（UBI）是否是未来社会的必需品",
+    "query": "全民基本收入（UBI）是否是未来社会的必需品",
+    "target_source_id": 1,
+    "baseline_dir": "data/baseline/103",
+    "simulator_item": "outputs/datasets/103/simulator_item_ds103.json",
+    "before_total": 42.746068427404055
+  }
+]

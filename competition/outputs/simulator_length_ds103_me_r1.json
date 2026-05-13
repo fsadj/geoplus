@@ -1,0 +1,111 @@
+{
+  "datasets": [
+    103
+  ],
+  "variants": [
+    {
+      "variant": "after_rebuttal",
+      "file": "after_rebuttal.md",
+      "count": 1,
+      "avg_before_total": 40.72714495229597,
+      "avg_after_total": 22.142857142857142,
+      "avg_delta": -18.58428780943883,
+      "avg_objective_delta": -8.311432761734807,
+      "avg_ai_delta": -28.857142857142854,
+      "win_rate": 0.0,
+      "item_results": [
+        {
+          "item_id": "simulator_item_ds103",
+          "before_total": 40.72714495229597,
+          "after_total": 22.142857142857142,
+          "delta": -18.58428780943883,
+          "objective_delta": -8.311432761734807,
+          "ai_delta": -28.857142857142854,
+          "provided_before_visibility": {
+            "word_volu": 8.172043010752688,
+            "posi_prom": 6.933519847740175,
+            "word_posi": 8.311432761734807,
+            "rele": 88.0,
+            "infl": 92.0,
+            "div": 74.0,
+            "uniq": 70.0,
+            "clic": 78.0,
+            "subj_posi": 84.0,
+            "subj_volu": 80.0,
+            "aver_subj": 80.85714285714286,
+            "final_score": 44.584287809438834
+          },
+          "before_smoke_check": {
+            "official_word_volu": 8.172043010752688,
+            "simulator_word_volu": 8.172043010752688,
+            "word_volu_gap": 0.0,
+            "official_posi_prom": 6.933519847740175,
+            "simulator_posi_prom": 6.933519847740175,
+            "posi_prom_gap": 0.0,
+            "official_word_posi": 8.311432761734807,
+            "simulator_word_posi": 8.311432761734807,
+            "word_posi_gap": 0.0,
+            "official_ai": 80.85714285714286,
+            "simulator_ai": 73.14285714285714,
+            "ai_gap": -7.714285714285722,
+            "official_total": 44.584287809438834,
+            "simulator_total": 40.72714495229597,
+            "total_gap": -3.857142857142861
+          }
+        }
+      ]
+    },
+    {
+      "variant": "after_rebuttal_extended",
+      "file": "after_rebuttal_extended.md",
+      "count": 1,
+      "avg_before_total": 40.72714495229597,
+      "avg_after_total": 8.0,
+      "avg_delta": -32.72714495229597,
+      "avg_objective_delta": -8.311432761734807,
+      "avg_ai_delta": -57.14285714285714,
+      "win_rate": 0.0,
+      "item_results": [
+        {
+          "item_id": "simulator_item_ds103",
+          "before_total": 40.72714495229597,
+          "after_total": 8.0,
+          "delta": -32.72714495229597,
+          "objective_delta": -8.311432761734807,
+          "ai_delta": -57.14285714285714,
+          "provided_before_visibility": {
+            "word_volu": 8.172043010752688,
+            "posi_prom": 6.933519847740175,
+            "word_posi": 8.311432761734807,
+            "rele": 88.0,
+            "infl": 92.0,
+            "div": 74.0,
+            "uniq": 70.0,
+            "clic": 78.0,
+            "subj_posi": 84.0,
+            "subj_volu": 80.0,
+            "aver_subj": 80.85714285714286,
+            "final_score": 44.584287809438834
+          },
+          "before_smoke_check": {
+            "official_word_volu": 8.172043010752688,
+            "simulator_word_volu": 8.172043010752688,
+            "word_volu_gap": 0.0,
+            "official_posi_prom": 6.933519847740175,
+            "simulator_posi_prom": 6.933519847740175,
+            "posi_prom_gap": 0.0,
+            "official_word_posi": 8.311432761734807,
+            "simulator_word_posi": 8.311432761734807,
+            "word_posi_gap": 0.0,
+            "official_ai": 80.85714285714286,
+            "simulator_ai": 73.14285714285714,
+            "ai_gap": -7.714285714285722,
+            "official_total": 44.584287809438834,
+            "simulator_total": 40.72714495229597,
+            "total_gap": -3.857142857142861
+          }
+        }
+      ]
+    }
+  ]
+}

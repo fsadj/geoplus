@@ -1,5 +1,0 @@
-ddgs
-matplotlib
-numpy
-requests
-trafilatura
