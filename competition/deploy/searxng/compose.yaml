@@ -1,0 +1,27 @@
+name: geoplus-searxng
+
+services:
+  core:
+    container_name: geoplus-searxng-core
+    image: ${SEARXNG_IMAGE:-docker.io/searxng/searxng:${SEARXNG_VERSION:-latest}}
+    restart: unless-stopped
+    ports:
+      - ${SEARXNG_HOST:-127.0.0.1}:${SEARXNG_PORT:-18080}:${SEARXNG_PORT:-18080}
+    env_file: ./.env
+    depends_on:
+      - valkey
+    volumes:
+      - ./core-config:/etc/searxng/
+      - core-data:/var/cache/searxng/
+
+  valkey:
+    container_name: geoplus-searxng-valkey
+    image: ${VALKEY_IMAGE:-docker.io/valkey/valkey:9-alpine}
+    command: valkey-server --save 30 1 --loglevel warning
+    restart: unless-stopped
+    volumes:
+      - valkey-data:/data/
+
+volumes:
+  core-data:
+  valkey-data:

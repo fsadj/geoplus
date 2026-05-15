@@ -1,0 +1,15 @@
+[
+  {
+    "variant": "after_novelty_gap",
+    "dataset_id": 101,
+    "count": 1,
+    "avg_delta": 10.876452665269852,
+    "std_delta": 0.0,
+    "delta_p10": 10.876452665269852,
+    "delta_p50": 10.876452665269852,
+    "delta_p90": 10.876452665269852,
+    "win_rate": 100.0,
+    "avg_objective_delta": 17.46719104482544,
+    "avg_ai_delta": 4.285714285714278
+  }
+]

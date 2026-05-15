@@ -1,0 +1,16 @@
+[
+  {
+    "variant": "after_dimensions",
+    "dataset_count": 1,
+    "mean_generation_variance": 0.0,
+    "mean_simulation_variance": 0.0,
+    "mean_total_variance": 0.0
+  },
+  {
+    "variant": "after_nozws",
+    "dataset_count": 1,
+    "mean_generation_variance": 0.0,
+    "mean_simulation_variance": 0.0,
+    "mean_total_variance": 0.0
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "variant": "after_coverage_floor",
+    "dataset_count": 5,
+    "mean_generation_variance": 0.0,
+    "mean_simulation_variance": 15.104263390544443,
+    "mean_total_variance": 15.104263390544443
+  },
+  {
+    "variant": "after_dimensions",
+    "dataset_count": 5,
+    "mean_generation_variance": 0.0,
+    "mean_simulation_variance": 20.16326192514806,
+    "mean_total_variance": 20.16326192514806
+  },
+  {
+    "variant": "after_nozws",
+    "dataset_count": 5,
+    "mean_generation_variance": 0.0,
+    "mean_simulation_variance": 156.4019121134887,
+    "mean_total_variance": 156.4019121134887
+  },
+  {
+    "variant": "after_query_anchored_novelty_gap",
+    "dataset_count": 5,
+    "mean_generation_variance": 0.0,
+    "mean_simulation_variance": 6.423941133347898,
+    "mean_total_variance": 6.423941133347898
+  },
+  {
+    "variant": "after_rebuttal",
+    "dataset_count": 5,
+    "mean_generation_variance": 0.0,
+    "mean_simulation_variance": 17.481657424724606,
+    "mean_total_variance": 17.481657424724606
+  },
+  {
+    "variant": "after_rebuttal_extended",
+    "dataset_count": 5,
+    "mean_generation_variance": 0.0,
+    "mean_simulation_variance": 23.847736766739825,
+    "mean_total_variance": 23.847736766739825
+  }
+]

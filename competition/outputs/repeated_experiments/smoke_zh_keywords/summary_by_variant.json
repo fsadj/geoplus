@@ -1,0 +1,21 @@
+[
+  {
+    "variant": "after_novelty_gap",
+    "count": 1,
+    "avg_delta": 10.876452665269852,
+    "std_delta": 0.0,
+    "avg_objective_delta": 17.46719104482544,
+    "avg_ai_delta": 4.285714285714278,
+    "win_rate": 100.0,
+    "delta_p10": 10.876452665269852,
+    "delta_p50": 10.876452665269852,
+    "delta_p90": 10.876452665269852,
+    "delta_min": 10.876452665269852,
+    "delta_max": 10.876452665269852,
+    "ci95_low": 10.876452665269852,
+    "ci95_high": 10.876452665269852,
+    "generation_variance_mean": 0.0,
+    "simulation_variance_mean": 0.0,
+    "objective_ai_covariance": 0.0
+  }
+]

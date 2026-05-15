@@ -1,4 +1,3 @@
-ddgs
 matplotlib
 numpy
 requests

@@ -1,0 +1,36 @@
+{
+  "experiment_name": "report5_smoke",
+  "datasets": [
+    201
+  ],
+  "variants": [
+    "after_nozws",
+    "after_dimensions"
+  ],
+  "generation_rounds": 1,
+  "sim_rounds": 1,
+  "refresh_cache_mode": "first",
+  "search_language": "zh-CN",
+  "search_cache_schema_version": 2,
+  "keyword_prompt_version": 2,
+  "created_at": "2026-05-15T02:13:51.959179+00:00",
+  "pipeline_script": "/Users/brazion/Desktop/geoplus/competition/scripts/pipeline/main.py",
+  "compare_script": "/Users/brazion/Desktop/geoplus/competition/scripts/simulator/compare_variants.py",
+  "analyze_script": "/Users/brazion/Desktop/geoplus/competition/scripts/analysis/analyze_repeated_experiments.py",
+  "dataset_manifest": "/Users/brazion/Desktop/geoplus/competition/config/report5_datasets.json",
+  "records": [
+    {
+      "variant": "after_nozws",
+      "dataset_id": 201,
+      "source_path": "/Users/brazion/Desktop/geoplus/competition/outputs/datasets/201/after_nozws.md",
+      "copied_path": "/Users/brazion/Desktop/geoplus/competition/outputs/repeated_experiments/report5_smoke/generated/generation_01/201/after_nozws.md"
+    },
+    {
+      "variant": "after_dimensions",
+      "dataset_id": 201,
+      "source_path": "/Users/brazion/Desktop/geoplus/competition/outputs/datasets/201/after_dimensions.md",
+      "copied_path": "/Users/brazion/Desktop/geoplus/competition/outputs/repeated_experiments/report5_smoke/generated/generation_01/201/after_dimensions.md"
+    }
+  ],
+  "completed_at": "2026-05-15T02:26:16.500201+00:00"
+}

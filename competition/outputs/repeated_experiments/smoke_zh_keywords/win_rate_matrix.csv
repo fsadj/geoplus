@@ -1,0 +1,2 @@
+variant,dataset_id,count,win_rate,avg_delta,avg_objective_delta,avg_ai_delta
+after_novelty_gap,101,1,100.0000,10.876453,17.467191,4.285714

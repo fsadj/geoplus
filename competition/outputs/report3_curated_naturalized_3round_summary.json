@@ -1,0 +1,179 @@
+{
+  "datasets": [
+    101,
+    102,
+    103
+  ],
+  "variants": [
+    {
+      "variant": "after_novelty_gap",
+      "file": "after_novelty_gap.md",
+      "count": 3,
+      "avg_before_total": 47.55583084406346,
+      "avg_after_total": 67.19435986602619,
+      "avg_delta": 19.638529021962736,
+      "avg_objective_delta": 21.83261359948102,
+      "avg_ai_delta": 17.444444444444443,
+      "win_rate": 100.0,
+      "item_results": [
+        {
+          "item_id": "simulator_item_ds101",
+          "delta": 9.79120418239438,
+          "objective_delta": 14.249075031455419,
+          "ai_delta": 5.333333333333333
+        },
+        {
+          "item_id": "simulator_item_ds102",
+          "delta": 26.551684400420182,
+          "objective_delta": 23.91289261036417,
+          "ai_delta": 29.190476190476186
+        },
+        {
+          "item_id": "simulator_item_ds103",
+          "delta": 22.57269848307364,
+          "objective_delta": 27.335873156623467,
+          "ai_delta": 17.809523809523807
+        }
+      ],
+      "delta_min": 18.27462322040299,
+      "delta_max": 21.66169546295684,
+      "delta_range": 3.387072242553849
+    },
+    {
+      "variant": "after_novelty_gap_naturalized",
+      "file": "after_novelty_gap_naturalized.md",
+      "count": 3,
+      "avg_before_total": 47.55583084406346,
+      "avg_after_total": 66.71132349089925,
+      "avg_delta": 19.15549264683579,
+      "avg_objective_delta": 21.07289005557634,
+      "avg_ai_delta": 17.238095238095237,
+      "win_rate": 100.0,
+      "item_results": [
+        {
+          "item_id": "simulator_item_ds101",
+          "delta": 15.580717984358166,
+          "objective_delta": 25.161435968716347,
+          "ai_delta": 6.0
+        },
+        {
+          "item_id": "simulator_item_ds102",
+          "delta": 20.390824737672098,
+          "objective_delta": 12.972125665820391,
+          "ai_delta": 27.809523809523807
+        },
+        {
+          "item_id": "simulator_item_ds103",
+          "delta": 21.4949352184771,
+          "objective_delta": 25.085108532192294,
+          "ai_delta": 17.9047619047619
+        }
+      ],
+      "delta_min": 14.626681611978617,
+      "delta_max": 25.500941836081434,
+      "delta_range": 10.874260224102818
+    },
+    {
+      "variant": "after_novelty_gap_rebuttal_extended",
+      "file": "after_novelty_gap_rebuttal_extended.md",
+      "count": 3,
+      "avg_before_total": 47.55583084406346,
+      "avg_after_total": 62.14464321219998,
+      "avg_delta": 14.588812368136516,
+      "avg_objective_delta": 20.749053307701605,
+      "avg_ai_delta": 8.428571428571429,
+      "win_rate": 88.88888888888887,
+      "item_results": [
+        {
+          "item_id": "simulator_item_ds101",
+          "delta": 16.767492666940708,
+          "objective_delta": 28.201652000548084,
+          "ai_delta": 5.333333333333333
+        },
+        {
+          "item_id": "simulator_item_ds102",
+          "delta": 23.390748559881246,
+          "objective_delta": 18.305306643572013,
+          "ai_delta": 28.47619047619047
+        },
+        {
+          "item_id": "simulator_item_ds103",
+          "delta": 3.6081958775875953,
+          "objective_delta": 15.740201278984712,
+          "ai_delta": -8.523809523809524
+        }
+      ],
+      "delta_min": -4.6509873343056,
+      "delta_max": 27.999505002197935,
+      "delta_range": 32.65049233650353
+    },
+    {
+      "variant": "after_nozws_implicit_bestof",
+      "file": "after_nozws_implicit_bestof.md",
+      "count": 3,
+      "avg_before_total": 47.55583084406346,
+      "avg_after_total": 59.04560597232527,
+      "avg_delta": 11.489775128261817,
+      "avg_objective_delta": 6.487486764460139,
+      "avg_ai_delta": 16.49206349206349,
+      "win_rate": 77.77777777777777,
+      "item_results": [
+        {
+          "item_id": "simulator_item_ds101",
+          "delta": -2.156812576747484,
+          "objective_delta": -8.218387058256868,
+          "ai_delta": 3.904761904761903
+        },
+        {
+          "item_id": "simulator_item_ds102",
+          "delta": 20.26931846759559,
+          "objective_delta": 12.395779792334034,
+          "ai_delta": 28.14285714285714
+        },
+        {
+          "item_id": "simulator_item_ds103",
+          "delta": 16.356819493937344,
+          "objective_delta": 15.285067559303252,
+          "ai_delta": 17.42857142857143
+        }
+      ],
+      "delta_min": 8.722637790193206,
+      "delta_max": 13.371907628355139,
+      "delta_range": 4.649269838161933
+    },
+    {
+      "variant": "after_nozws",
+      "file": "after_nozws.md",
+      "count": 3,
+      "avg_before_total": 47.55583084406346,
+      "avg_after_total": 57.1934074784598,
+      "avg_delta": 9.637576634396344,
+      "avg_objective_delta": 7.211661205300627,
+      "avg_ai_delta": 12.063492063492063,
+      "win_rate": 77.77777777777777,
+      "item_results": [
+        {
+          "item_id": "simulator_item_ds101",
+          "delta": 6.419769766353089,
+          "objective_delta": 7.696682389849044,
+          "ai_delta": 5.142857142857143
+        },
+        {
+          "item_id": "simulator_item_ds102",
+          "delta": 14.331325034511261,
+          "objective_delta": 6.7102691166415696,
+          "ai_delta": 21.952380952380953
+        },
+        {
+          "item_id": "simulator_item_ds103",
+          "delta": 8.16163510232468,
+          "objective_delta": 7.228032109411266,
+          "ai_delta": 9.095238095238093
+        }
+      ],
+      "delta_min": 5.074457539426909,
+      "delta_max": 12.606236441631532,
+      "delta_range": 7.531778902204623
+    }
+  ]
+}

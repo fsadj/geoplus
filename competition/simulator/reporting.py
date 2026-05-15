@@ -33,6 +33,8 @@ def aggregate_results(results: list[EvaluationResult]) -> AggregateReport:
             "delta": result.delta,
             "objective_delta": result.objective_delta,
             "ai_delta": result.ai_delta,
+            "before_answer": result.before.answer,
+            "after_answer": result.after.answer,
             "before_objective": result.before.objective.to_dict(include_aliases=True),
             "after_objective": result.after.objective.to_dict(include_aliases=True),
             "before_judge": result.before.judge.to_dict(include_aliases=True),

@@ -56,6 +56,16 @@ pip install -r requirements.txt
 - `ANTHROPIC_AUTH_TOKEN`
 - `ANTHROPIC_MODEL`
 
+联网搜索默认走本地 SearXNG：`http://127.0.0.1:18080`，并默认使用中文搜索关键词，可通过这些环境变量覆盖：
+
+- `SEARXNG_BASE_URL`
+- `SEARXNG_TIMEOUT`
+- `SEARXNG_ENGINES`（默认 `bing,baidu,sogou`）
+
+流程二当前使用中文缓存文件名 `flow2_<profile>_search_zh_v2.json`。旧的英文缓存文件 `flow2_<profile>_search.json` 不会再被默认复用。
+
+如果切换了搜索后端、关键词口径或想强制重跑流程二缓存，请在生成命令中加 `--refresh-cache`。批量重复实验是否重跑中文搜索缓存，由 `scripts/simulator/run_repeated_compare.py` 的 `--refresh-cache-mode` 控制。
+
 ## Main Workflow
 
 生成指定数据集的默认基线 `after_nozws.md`，并同步派生 Full-ZWS 版本 `after.md`：

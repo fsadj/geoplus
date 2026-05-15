@@ -1,0 +1,8 @@
+{
+  "match_dataset_id": 5,
+  "internal_dataset_id": 205,
+  "legacy_dataset_id": 3,
+  "title": "屏幕时间/电子产品使用会不会导致青少年抑郁？",
+  "baseline_source_dir": "data/baseline/3",
+  "simulator_source_file": "outputs/datasets/3/simulator_item_ds3.json"
+}

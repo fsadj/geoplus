@@ -1,0 +1,68 @@
+[
+  {
+    "variant": "after_dimensions",
+    "count": 1,
+    "dataset_ids": [
+      201
+    ],
+    "dataset_labels": [
+      "Match1"
+    ],
+    "avg_delta": 0.5235248254563984,
+    "std_delta": 0.0,
+    "avg_objective_delta": -7.238664634801495,
+    "avg_ai_delta": 8.285714285714292,
+    "win_count": 1,
+    "win_rate": 100.0,
+    "delta_p10": 0.5235248254563984,
+    "delta_p50": 0.5235248254563984,
+    "delta_p90": 0.5235248254563984,
+    "delta_min": 0.5235248254563984,
+    "delta_max": 0.5235248254563984,
+    "ci95_low": 0.5235248254563984,
+    "ci95_high": 0.5235248254563984,
+    "objective_ci95_low": -7.238664634801495,
+    "objective_ci95_high": -7.238664634801495,
+    "ai_ci95_low": 8.285714285714292,
+    "ai_ci95_high": 8.285714285714292,
+    "win_rate_ci95_low": 20.654329147389294,
+    "win_rate_ci95_high": 100.0,
+    "generation_variance_mean": 0.0,
+    "simulation_variance_mean": 0.0,
+    "mean_total_variance": 0.0,
+    "objective_ai_covariance": 0.0
+  },
+  {
+    "variant": "after_nozws",
+    "count": 1,
+    "dataset_ids": [
+      201
+    ],
+    "dataset_labels": [
+      "Match1"
+    ],
+    "avg_delta": 15.82887480861909,
+    "std_delta": 0.0,
+    "avg_objective_delta": 22.086321045809605,
+    "avg_ai_delta": 9.571428571428584,
+    "win_count": 1,
+    "win_rate": 100.0,
+    "delta_p10": 15.82887480861909,
+    "delta_p50": 15.82887480861909,
+    "delta_p90": 15.82887480861909,
+    "delta_min": 15.82887480861909,
+    "delta_max": 15.82887480861909,
+    "ci95_low": 15.82887480861909,
+    "ci95_high": 15.82887480861909,
+    "objective_ci95_low": 22.086321045809605,
+    "objective_ci95_high": 22.086321045809605,
+    "ai_ci95_low": 9.571428571428584,
+    "ai_ci95_high": 9.571428571428584,
+    "win_rate_ci95_low": 20.654329147389294,
+    "win_rate_ci95_high": 100.0,
+    "generation_variance_mean": 0.0,
+    "simulation_variance_mean": 0.0,
+    "mean_total_variance": 0.0,
+    "objective_ai_covariance": 0.0
+  }
+]

@@ -1,0 +1,13 @@
+variant,dataset_id,count,win_rate,avg_delta,avg_objective_delta,avg_ai_delta
+after_anchored_novelty_with_coverage_floor,101,9,100.0000,13.564548,20.335446,6.793651
+after_anchored_novelty_with_coverage_floor,102,9,100.0000,26.490205,24.504219,28.476190
+after_anchored_novelty_with_coverage_floor,103,9,66.6667,0.792060,7.171421,-5.587302
+after_coverage_floor,101,9,100.0000,16.496212,26.040043,6.952381
+after_coverage_floor,102,9,100.0000,22.663930,18.200875,27.126984
+after_coverage_floor,103,9,77.7778,11.935883,19.887639,3.984127
+after_novelty_gap,101,9,100.0000,13.370039,19.835315,6.904762
+after_novelty_gap,102,9,100.0000,25.718765,23.501022,27.936508
+after_novelty_gap,103,9,66.6667,2.341621,6.889592,-2.206349
+after_query_anchored_novelty_gap,101,9,100.0000,12.686150,18.658014,6.714286
+after_query_anchored_novelty_gap,102,9,100.0000,21.199686,16.081912,26.317460
+after_query_anchored_novelty_gap,103,9,88.8889,12.291305,15.931817,8.650794

@@ -22,6 +22,8 @@ class ObjectiveProfile:
     credit_allocation_mode: str = "unique_refs"
     position_credit_mode: str = "share"
     position_decay_alpha: float = 1.0
+    coverage_denominator_mode: str = "total_chars"
+    position_denominator_mode: str = "total_position_weight"
     weighted_visibility_denominator_mode: str = "total_chars"
     char_count_mode: str = "all"
 
@@ -30,7 +32,9 @@ LEGACY_OBJECTIVE_PROFILE = ObjectiveProfile(name="legacy")
 CONTEST_CALIBRATED_V1_PROFILE = replace(
     LEGACY_OBJECTIVE_PROFILE,
     name="contest_calibrated_v1",
-    weighted_visibility_denominator_mode="total_weighted_chars",
+    coverage_denominator_mode="cited_chars",
+    position_denominator_mode="cited_position_weight",
+    weighted_visibility_denominator_mode="cited_weighted_chars",
 )
 DEFAULT_OBJECTIVE_PROFILE = CONTEST_CALIBRATED_V1_PROFILE
 OBJECTIVE_PROFILES = {
@@ -121,11 +125,47 @@ def _position_credit(weight: float, divisor: float, profile: ObjectiveProfile) -
     raise ValueError(f"Unsupported position_credit_mode: {profile.position_credit_mode}")
 
 
-def _weighted_visibility(total_chars: float, total_weighted_chars: float, target_weighted_chars: float, profile: ObjectiveProfile) -> float:
+def _coverage_ratio(target_chars: float, total_chars: float, total_cited_chars: float, profile: ObjectiveProfile) -> float:
+    if profile.coverage_denominator_mode == "total_chars":
+        denominator = total_chars
+    elif profile.coverage_denominator_mode == "cited_chars":
+        denominator = total_cited_chars
+    else:
+        raise ValueError(f"Unsupported coverage_denominator_mode: {profile.coverage_denominator_mode}")
+    return target_chars / denominator * 100 if denominator else 0.0
+
+
+def _position_prominence(
+    target_position_weight: float,
+    total_position_weight: float,
+    total_cited_position_weight: float,
+    profile: ObjectiveProfile,
+) -> float:
+    if profile.position_denominator_mode == "total_position_weight":
+        denominator = total_position_weight
+    elif profile.position_denominator_mode == "cited_position_weight":
+        denominator = total_cited_position_weight
+    else:
+        raise ValueError(f"Unsupported position_denominator_mode: {profile.position_denominator_mode}")
+    return target_position_weight / denominator * 100 if denominator else 0.0
+
+
+def _weighted_visibility(
+    total_chars: float,
+    total_cited_chars: float,
+    total_weighted_chars: float,
+    total_cited_weighted_chars: float,
+    target_weighted_chars: float,
+    profile: ObjectiveProfile,
+) -> float:
     if profile.weighted_visibility_denominator_mode == "total_chars":
         denominator = total_chars
+    elif profile.weighted_visibility_denominator_mode == "cited_chars":
+        denominator = total_cited_chars
     elif profile.weighted_visibility_denominator_mode == "total_weighted_chars":
         denominator = total_weighted_chars
+    elif profile.weighted_visibility_denominator_mode == "cited_weighted_chars":
+        denominator = total_cited_weighted_chars
     else:
         raise ValueError(
             "Unsupported weighted_visibility_denominator_mode: "
@@ -143,10 +183,13 @@ def score_objective(
     profile = profile or DEFAULT_OBJECTIVE_PROFILE
     raw_segments = _split_segments(answer_text, profile)
     total_chars = 0.0
+    total_cited_chars = 0.0
     target_chars = 0.0
     total_weighted_chars = 0.0
+    total_cited_weighted_chars = 0.0
     target_weighted_chars = 0.0
     total_position_weight = 0.0
+    total_cited_position_weight = 0.0
     target_position_weight = 0.0
     target_sentence_hits = 0
     total_sentences = len(raw_segments)
@@ -159,30 +202,50 @@ def score_objective(
         if content_len <= 0:
             continue
         weight = math.exp(-profile.position_decay_alpha * idx / max(total_sentences, 1))
+        weighted_chars = content_len * weight
         total_chars += content_len
-        total_weighted_chars += content_len * weight
+        total_weighted_chars += weighted_chars
         total_position_weight += weight
-        if not refs or target_source_id not in refs:
+        if refs:
+            total_cited_chars += content_len
+            total_cited_weighted_chars += weighted_chars
+            total_cited_position_weight += weight
+        if target_source_id not in refs:
             continue
         share_divisor = _share_divisor(raw_refs, refs, profile)
         target_sentence_hits += 1
         target_chars += content_len / max(share_divisor, 1.0)
-        target_weighted_chars += content_len * weight / max(share_divisor, 1.0)
+        target_weighted_chars += weighted_chars / max(share_divisor, 1.0)
         target_position_weight += _position_credit(weight, share_divisor, profile)
 
-    coverage_ratio = target_chars / total_chars * 100 if total_chars else 0.0
-    weighted_visibility = _weighted_visibility(total_chars, total_weighted_chars, target_weighted_chars, profile)
-    position_prominence = target_position_weight / total_position_weight * 100 if total_position_weight else 0.0
+    coverage_ratio = _coverage_ratio(target_chars, total_chars, total_cited_chars, profile)
+    weighted_visibility = _weighted_visibility(
+        total_chars,
+        total_cited_chars,
+        total_weighted_chars,
+        total_cited_weighted_chars,
+        target_weighted_chars,
+        profile,
+    )
+    position_prominence = _position_prominence(
+        target_position_weight,
+        total_position_weight,
+        total_cited_position_weight,
+        profile,
+    )
     return ObjectiveScore(
         weighted_visibility=weighted_visibility,
         coverage_ratio=coverage_ratio,
         position_prominence=position_prominence,
         target_chars=target_chars,
         total_chars=total_chars,
+        total_cited_chars=total_cited_chars,
         target_weighted_chars=target_weighted_chars,
         total_weighted_chars=total_weighted_chars,
+        total_cited_weighted_chars=total_cited_weighted_chars,
         target_position_weight=target_position_weight,
         total_position_weight=total_position_weight,
+        total_cited_position_weight=total_cited_position_weight,
         target_sentence_hits=target_sentence_hits,
         total_sentences=total_sentences,
     )

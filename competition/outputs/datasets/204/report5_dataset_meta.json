@@ -1,0 +1,8 @@
+{
+  "match_dataset_id": 4,
+  "internal_dataset_id": 204,
+  "legacy_dataset_id": 1,
+  "title": "双语教育是否一定能带来超越语言能力的认知控制优势？",
+  "baseline_source_dir": "data/baseline/1",
+  "simulator_source_file": "outputs/datasets/1/simulator_item_ds1.json"
+}

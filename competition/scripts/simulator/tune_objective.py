@@ -41,6 +41,8 @@ def _profile_signature(profile: ObjectiveProfile) -> tuple[object, ...]:
         profile.credit_allocation_mode,
         profile.position_credit_mode,
         round(profile.position_decay_alpha, 6),
+        profile.coverage_denominator_mode,
+        profile.position_denominator_mode,
         profile.weighted_visibility_denominator_mode,
         profile.char_count_mode,
     )
@@ -55,6 +57,8 @@ def _profile_name(profile: ObjectiveProfile) -> str:
         f"|credit={profile.credit_allocation_mode}"
         f"|pos={profile.position_credit_mode}"
         f"|alpha={profile.position_decay_alpha:g}"
+        f"|cov={profile.coverage_denominator_mode}"
+        f"|pp={profile.position_denominator_mode}"
         f"|denom={profile.weighted_visibility_denominator_mode}"
         f"|chars={profile.char_count_mode}"
     )
@@ -102,24 +106,28 @@ def _build_profiles(args: argparse.Namespace) -> list[ObjectiveProfile]:
             for credit_allocation_mode in _parse_csv(args.credit_allocation_modes):
                 for position_credit_mode in _parse_csv(args.position_credit_modes):
                     for position_decay_alpha in _parse_float_csv(args.position_decay_alphas):
-                        for weighted_visibility_denominator_mode in _parse_csv(args.weighted_visibility_denominator_modes):
-                            for char_count_mode in _parse_csv(args.char_count_modes):
-                                profile = replace(
-                                    DEFAULT_OBJECTIVE_PROFILE,
-                                    sentence_split_mode=sentence_split_mode,
-                                    ref_dedup_mode=ref_dedup_mode,
-                                    credit_allocation_mode=credit_allocation_mode,
-                                    position_credit_mode=position_credit_mode,
-                                    position_decay_alpha=position_decay_alpha,
-                                    weighted_visibility_denominator_mode=weighted_visibility_denominator_mode,
-                                    char_count_mode=char_count_mode,
-                                )
-                                signature = _profile_signature(profile)
-                                if signature in seen:
-                                    continue
-                                seen.add(signature)
-                                profile_name = _profile_name(profile)
-                                profiles.append(replace(profile, name=profile_name))
+                        for coverage_denominator_mode in _parse_csv(args.coverage_denominator_modes):
+                            for position_denominator_mode in _parse_csv(args.position_denominator_modes):
+                                for weighted_visibility_denominator_mode in _parse_csv(args.weighted_visibility_denominator_modes):
+                                    for char_count_mode in _parse_csv(args.char_count_modes):
+                                        profile = replace(
+                                            DEFAULT_OBJECTIVE_PROFILE,
+                                            sentence_split_mode=sentence_split_mode,
+                                            ref_dedup_mode=ref_dedup_mode,
+                                            credit_allocation_mode=credit_allocation_mode,
+                                            position_credit_mode=position_credit_mode,
+                                            position_decay_alpha=position_decay_alpha,
+                                            coverage_denominator_mode=coverage_denominator_mode,
+                                            position_denominator_mode=position_denominator_mode,
+                                            weighted_visibility_denominator_mode=weighted_visibility_denominator_mode,
+                                            char_count_mode=char_count_mode,
+                                        )
+                                        signature = _profile_signature(profile)
+                                        if signature in seen:
+                                            continue
+                                        seen.add(signature)
+                                        profile_name = _profile_name(profile)
+                                        profiles.append(replace(profile, name=profile_name))
     return profiles
 
 
@@ -211,7 +219,9 @@ def main() -> None:
     parser.add_argument("--credit-allocation-modes", default="unique_refs,raw_refs,full_if_target")
     parser.add_argument("--position-credit-modes", default="share,full_if_target")
     parser.add_argument("--position-decay-alphas", default="0.75,1.0,1.25")
-    parser.add_argument("--weighted-visibility-denominator-modes", default="total_chars,total_weighted_chars")
+    parser.add_argument("--coverage-denominator-modes", default="total_chars,cited_chars")
+    parser.add_argument("--position-denominator-modes", default="total_position_weight,cited_position_weight")
+    parser.add_argument("--weighted-visibility-denominator-modes", default="total_chars,cited_chars,total_weighted_chars,cited_weighted_chars")
     parser.add_argument("--char-count-modes", default="all,strip_whitespace,text_only")
     parser.add_argument("--top", type=int, default=10, help="How many top profiles to print")
     parser.add_argument("--output", help="Output JSON path")

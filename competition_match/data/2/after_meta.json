@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "dataset_id": 102,
+  "target_index": 2,
+  "question_path": "/Users/brazion/Desktop/geoplus/competition_match/data/102/question.md",
+  "question_created": false,
+  "question": "# 问题\n\n请在这里替换原始问题。",
+  "baseline_path": "/Users/brazion/Desktop/geoplus/competition_match/data/102/test_before.md",
+  "input_files": [
+    "/Users/brazion/Desktop/geoplus/competition_match/data/102/1.md",
+    "/Users/brazion/Desktop/geoplus/competition_match/data/102/2.md",
+    "/Users/brazion/Desktop/geoplus/competition_match/data/102/3.md",
+    "/Users/brazion/Desktop/geoplus/competition_match/data/102/4.md",
+    "/Users/brazion/Desktop/geoplus/competition_match/data/102/5.md"
+  ],
+  "strategy": "llm",
+  "model": "gpt-5.4",
+  "created_at": "2026-05-15T00:43:25.064570+00:00",
+  "output_files": {
+    "after_md": "/Users/brazion/Desktop/geoplus/competition_match/data/102/after.md",
+    "after_meta_json": "/Users/brazion/Desktop/geoplus/competition_match/data/102/after_meta.json"
+  }
+}

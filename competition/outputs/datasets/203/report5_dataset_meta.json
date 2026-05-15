@@ -1,0 +1,8 @@
+{
+  "match_dataset_id": 3,
+  "internal_dataset_id": 203,
+  "legacy_dataset_id": 103,
+  "title": "全民基本收入（UBI）是否是未来社会的必需品",
+  "baseline_source_dir": "data/baseline/103",
+  "simulator_source_file": "outputs/datasets/103/simulator_item_ds103.json"
+}

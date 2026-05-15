@@ -1,0 +1,26 @@
+[
+  {
+    "variant": "after_anchored_novelty_with_coverage_floor",
+    "mean_generation_variance": 37.72881285381872,
+    "mean_simulation_variance": 181.661332689671,
+    "mean_total_variance": 219.39014554348972
+  },
+  {
+    "variant": "after_coverage_floor",
+    "mean_generation_variance": 33.85308476739622,
+    "mean_simulation_variance": 165.7977325419107,
+    "mean_total_variance": 199.65081730930692
+  },
+  {
+    "variant": "after_novelty_gap",
+    "mean_generation_variance": 77.9751891304229,
+    "mean_simulation_variance": 103.90576775009686,
+    "mean_total_variance": 181.88095688051976
+  },
+  {
+    "variant": "after_query_anchored_novelty_gap",
+    "mean_generation_variance": 24.69993819811022,
+    "mean_simulation_variance": 88.2480231671931,
+    "mean_total_variance": 112.94796136530331
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "match_dataset_id": 2,
+  "internal_dataset_id": 202,
+  "legacy_dataset_id": 102,
+  "title": "基因编辑技术是否应该全面开放",
+  "baseline_source_dir": "data/baseline/102",
+  "simulator_source_file": "outputs/datasets/102/simulator_item_ds102.json"
+}

@@ -5,3 +5,5 @@ __pycache__/
 .venv/
 venv/
 outputs/pdf/
+competition/deploy/searxng/.env
+competition/deploy/searxng/core-config/

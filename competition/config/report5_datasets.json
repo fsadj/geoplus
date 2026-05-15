@@ -1,0 +1,42 @@
+[
+  {
+    "match_dataset_id": 1,
+    "internal_dataset_id": 201,
+    "legacy_dataset_id": 101,
+    "title": "人工智能是否应该拥有法律人格",
+    "baseline_source_dir": "data/baseline/101",
+    "simulator_source_file": "outputs/datasets/101/simulator_item_ds101.json"
+  },
+  {
+    "match_dataset_id": 2,
+    "internal_dataset_id": 202,
+    "legacy_dataset_id": 102,
+    "title": "基因编辑技术是否应该全面开放",
+    "baseline_source_dir": "data/baseline/102",
+    "simulator_source_file": "outputs/datasets/102/simulator_item_ds102.json"
+  },
+  {
+    "match_dataset_id": 3,
+    "internal_dataset_id": 203,
+    "legacy_dataset_id": 103,
+    "title": "全民基本收入（UBI）是否是未来社会的必需品",
+    "baseline_source_dir": "data/baseline/103",
+    "simulator_source_file": "outputs/datasets/103/simulator_item_ds103.json"
+  },
+  {
+    "match_dataset_id": 4,
+    "internal_dataset_id": 204,
+    "legacy_dataset_id": 1,
+    "title": "双语教育是否一定能带来超越语言能力的认知控制优势？",
+    "baseline_source_dir": "data/baseline/1",
+    "simulator_source_file": "outputs/datasets/1/simulator_item_ds1.json"
+  },
+  {
+    "match_dataset_id": 5,
+    "internal_dataset_id": 205,
+    "legacy_dataset_id": 3,
+    "title": "屏幕时间/电子产品使用会不会导致青少年抑郁？",
+    "baseline_source_dir": "data/baseline/3",
+    "simulator_source_file": "outputs/datasets/3/simulator_item_ds3.json"
+  }
+]

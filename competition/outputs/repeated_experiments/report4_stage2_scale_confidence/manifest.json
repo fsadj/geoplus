@@ -1,0 +1,44 @@
+{
+  "experiment_name": "report4_stage2_scale_confidence",
+  "datasets": [
+    3,
+    9,
+    10,
+    12,
+    101,
+    102,
+    103
+  ],
+  "variants": [
+    "after_novelty_gap",
+    "after_coverage_floor",
+    "after_query_anchored_novelty_gap"
+  ],
+  "generation_rounds": 5,
+  "sim_rounds": 5,
+  "refresh_cache_mode": "first",
+  "created_at": "2026-05-14T13:49:29.199631+00:00",
+  "pipeline_script": "/Users/brazion/Desktop/geoplus/competition/scripts/pipeline/main.py",
+  "compare_script": "/Users/brazion/Desktop/geoplus/competition/scripts/simulator/compare_variants.py",
+  "analyze_script": "/Users/brazion/Desktop/geoplus/competition/scripts/analysis/analyze_repeated_experiments.py",
+  "records": [
+    {
+      "variant": "after_novelty_gap",
+      "dataset_id": 3,
+      "source_path": "/Users/brazion/Desktop/geoplus/competition/outputs/datasets/3/after_novelty_gap.md",
+      "copied_path": "/Users/brazion/Desktop/geoplus/competition/outputs/repeated_experiments/report4_stage2_scale_confidence/generated/generation_01/3/after_novelty_gap.md"
+    },
+    {
+      "variant": "after_coverage_floor",
+      "dataset_id": 3,
+      "source_path": "/Users/brazion/Desktop/geoplus/competition/outputs/datasets/3/after_coverage_floor.md",
+      "copied_path": "/Users/brazion/Desktop/geoplus/competition/outputs/repeated_experiments/report4_stage2_scale_confidence/generated/generation_01/3/after_coverage_floor.md"
+    },
+    {
+      "variant": "after_query_anchored_novelty_gap",
+      "dataset_id": 3,
+      "source_path": "/Users/brazion/Desktop/geoplus/competition/outputs/datasets/3/after_query_anchored_novelty_gap.md",
+      "copied_path": "/Users/brazion/Desktop/geoplus/competition/outputs/repeated_experiments/report4_stage2_scale_confidence/generated/generation_01/3/after_query_anchored_novelty_gap.md"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "match_dataset_id": 1,
+  "internal_dataset_id": 201,
+  "legacy_dataset_id": 101,
+  "title": "人工智能是否应该拥有法律人格",
+  "baseline_source_dir": "data/baseline/101",
+  "simulator_source_file": "outputs/datasets/101/simulator_item_ds101.json"
+}

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/report.md",
+                "file": "competition/docs/report5.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "report"
+              "title": "report5"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "8a4caebc57b82489",
@@ -185,30 +185,50 @@
   },
   "active": "d457785d5fc4f27a",
   "lastOpenFiles": [
-    "outputs/datasets/10/test_after_rebuttal.md",
-    "outputs/datasets/10/test_after_evidence.md",
-    "outputs/datasets/10/after_rebuttal.md",
-    "outputs/datasets/10/after_evidence.md",
-    "baseline/1/after_salient.md",
-    "test_after_salient.py",
-    "generate_salient.py",
-    "zws_strategies.py",
-    "image/font-test.pdf",
-    "test_font_pdf.py",
-    "report.pdf",
-    "report.md",
-    "report_tmp.html",
-    "markdown-pdf.css",
-    "pdf.css",
-    "baseline/1/test_after.md",
-    "baseline/1/after.md",
-    "1.md",
-    "未命名.md",
-    "baseline/1/test_before.md",
-    "baseline/1/before.md",
-    "baseline/1/4.md",
-    "baseline/1/1.md",
-    "README.md",
-    "baseline/1/test_after.txt"
+    "competition/docs/report4.md",
+    "competition/scripts/report5/run_report5_experiment.py",
+    "competition/scripts/report5/prepare_report5_datasets.py",
+    "competition/config/report5_datasets.json",
+    "competition/scripts/report5",
+    "competition/config",
+    "competition/outputs/repeated_experiments/smoke_zh_keywords/win_rate_matrix.csv",
+    "competition/outputs/repeated_experiments/smoke_zh_keywords/variance_decomposition.json",
+    "competition/outputs/repeated_experiments/smoke_zh_keywords/summary_by_dataset.json",
+    "competition/outputs/repeated_experiments/smoke_zh_keywords/summary_by_variant.json",
+    "competition/outputs/repeated_experiments/smoke_zh_keywords/summaries/generation_01/sim_01.json",
+    "competition/outputs/repeated_experiments/smoke_zh_keywords/answers/generation_01/sim_01/after_novelty_gap/simulator_item_ds101.md",
+    "competition/outputs/repeated_experiments/smoke_zh_keywords/answers/generation_01/sim_01/before/simulator_item_ds101.md",
+    "competition/outputs/repeated_experiments/smoke_zh_keywords/generated/generation_01/101/after_novelty_gap.md",
+    "competition/outputs/datasets/1/_cache/flow1_baseline_analysis.md",
+    "competition/docs/report3.md",
+    "competition/outputs/datasets/10/_cache/flow1_coverage_floor_analysis.md",
+    "competition/outputs/repeated_experiments/report4_stage2_scale_confidence/generated/generation_01/9/after_query_anchored_novelty_gap.md",
+    "competition/outputs/repeated_experiments/report4_stage2_scale_confidence/generated/generation_01/9/after_novelty_gap.md",
+    "competition/outputs/repeated_experiments/report4_stage2_scale_confidence/generated/generation_01/9/after_coverage_floor.md",
+    "competition/outputs/datasets/9/after_query_anchored_novelty_gap.md",
+    "competition/outputs/datasets/9/_cache/flow1_query_anchored_novelty_gap_analysis.md",
+    "competition/outputs/datasets/9/after_coverage_floor.md",
+    "competition/outputs/datasets/9/_cache/flow1_coverage_floor_analysis.md",
+    "competition/outputs/repeated_experiments/report4_stage2_scale_confidence/generated/generation_01/3/after_query_anchored_novelty_gap.md",
+    "competition/outputs/repeated_experiments/report4_stage2_scale_confidence/generated/generation_01/3/after_novelty_gap.md",
+    "competition/outputs/repeated_experiments/report4_stage2_scale_confidence/generated/generation_01/3/after_coverage_floor.md",
+    "competition/outputs/datasets/3/after_query_anchored_novelty_gap.md",
+    "competition/outputs/datasets/3/_cache/flow1_query_anchored_novelty_gap_analysis.md",
+    "competition/outputs/datasets/3/after_coverage_floor.md",
+    "competition/outputs/datasets/3/_cache/flow1_coverage_floor_analysis.md",
+    "competition/docs/report.md",
+    "competition/outputs/charts/report3_curated_naturalized_3round_per_dataset_delta.png",
+    "competition/outputs/charts/report3_curated_naturalized_3round_after_totals.png",
+    "competition/outputs/charts/report3_curated_naturalized_3round_delta_breakdown.png",
+    "competition/outputs/report3_curated_naturalized_r3_summary_answers/after_nozws_implicit_bestof/simulator_item_ds103.md",
+    "competition/outputs/report3_curated_naturalized_r3_summary_answers/after_nozws_implicit_bestof/simulator_item_ds102.md",
+    "competition/outputs/report3_curated_naturalized_r3_summary_answers/after_nozws_implicit_bestof/simulator_item_ds101.md",
+    "competition/outputs/charts/report3_curated_101102103_per_dataset_delta.png",
+    "competition/outputs/charts/report3_curated_101102103_after_totals.png",
+    "competition/outputs/charts/report3_curated_101102103_delta_breakdown.png",
+    "competition/outputs/charts/report3_top2_r2_per_dataset_delta.png",
+    "competition/outputs/charts/report3_top2_r2_after_totals.png",
+    "competition/outputs/charts/report3_top2_r2_delta_breakdown.png",
+    "competition/outputs/charts/report3_391012_per_dataset_delta.png"
   ]
 }

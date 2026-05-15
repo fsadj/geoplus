@@ -62,10 +62,13 @@ class ObjectiveScore:
     position_prominence: float
     target_chars: float
     total_chars: float
+    total_cited_chars: float
     target_weighted_chars: float
     total_weighted_chars: float
+    total_cited_weighted_chars: float
     target_position_weight: float
     total_position_weight: float
+    total_cited_position_weight: float
     target_sentence_hits: int
     total_sentences: int
 

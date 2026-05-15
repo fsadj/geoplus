@@ -43,8 +43,24 @@ def item_json_path(dataset_id: int) -> Path:
     return REPO_ROOT / "outputs" / "datasets" / str(dataset_id) / f"simulator_item_ds{dataset_id}.json"
 
 
-def variant_path(dataset_id: int, file_name: str) -> Path:
-    return REPO_ROOT / "outputs" / "datasets" / str(dataset_id) / file_name
+def variant_path(dataset_id: int, file_name: str, variant_root: Path) -> Path:
+    return variant_root / str(dataset_id) / file_name
+
+
+def persist_answer_texts(results: list[EvaluationResult], item_results: list[dict], base_dir: Path, variant_name: str) -> None:
+    before_dir = base_dir / "before"
+    after_dir = base_dir / variant_name
+    before_dir.mkdir(parents=True, exist_ok=True)
+    after_dir.mkdir(parents=True, exist_ok=True)
+
+    for result, item_payload in zip(results, item_results):
+        item_id = result.before.item_id
+        before_path = before_dir / f"{item_id}.md"
+        after_path = after_dir / f"{item_id}.md"
+        before_path.write_text(result.before.answer, encoding="utf-8")
+        after_path.write_text(result.after.answer, encoding="utf-8")
+        item_payload["before_answer_path"] = str(before_path)
+        item_payload["after_answer_path"] = str(after_path)
 
 
 def load_dataset_contexts(dataset_ids: list[int], client: GPTMessagesClient) -> list[dict]:
@@ -72,14 +88,21 @@ def load_dataset_contexts(dataset_ids: list[int], client: GPTMessagesClient) -> 
     return contexts
 
 
-def summarize_variant_results(dataset_contexts: list[dict], variant_file: str, client: GPTMessagesClient) -> dict:
+def summarize_variant_results(
+    dataset_contexts: list[dict],
+    variant_file: str,
+    client: GPTMessagesClient,
+    *,
+    variant_root: Path,
+    answer_output_dir: Path | None = None,
+) -> dict:
     config = client.config
     results: list[EvaluationResult] = []
     for context in dataset_contexts:
         dataset_id = context["dataset_id"]
         item: ContestItem = context["item"]
         before_snapshot: EvaluationSnapshot = context["before_snapshot"]
-        after_file = variant_path(dataset_id, variant_file)
+        after_file = variant_path(dataset_id, variant_file, variant_root)
         after_text = after_file.read_text(encoding="utf-8").strip()
         after_item = item.with_target_content(after_text, target_label=after_file.name)
         after_snapshot = _evaluate_single_state(client, config, after_item, after_file.name)
@@ -92,8 +115,12 @@ def summarize_variant_results(dataset_contexts: list[dict], variant_file: str, c
             )
         )
     report = aggregate_results(results)
+    item_results = report.item_results
+    variant_name = variant_label(variant_file)
+    if answer_output_dir is not None:
+        persist_answer_texts(results, item_results, answer_output_dir, variant_name)
     return {
-        "variant": variant_label(variant_file),
+        "variant": variant_name,
         "file": variant_file,
         "count": report.count,
         "avg_before_total": report.avg_before_total,
@@ -102,7 +129,7 @@ def summarize_variant_results(dataset_contexts: list[dict], variant_file: str, c
         "avg_objective_delta": report.avg_objective_delta,
         "avg_ai_delta": report.avg_ai_delta,
         "win_rate": report.win_rate,
-        "item_results": report.item_results,
+        "item_results": item_results,
     }
 
 
@@ -142,25 +169,47 @@ def main() -> None:
         default=str(REPO_ROOT / "outputs" / "simulator_variant_summary.json"),
         help="Where to write the JSON summary",
     )
+    parser.add_argument(
+        "--variant-root",
+        default=str(REPO_ROOT / "outputs" / "datasets"),
+        help="Root directory containing per-dataset variant markdown files",
+    )
+    parser.add_argument(
+        "--answer-output-dir",
+        default=None,
+        help="Optional directory for before/after answer markdown outputs",
+    )
     args = parser.parse_args()
 
     dataset_ids = parse_dataset_ids(args.datasets)
     variant_files = [normalize_variant_name(part) for part in args.variants.split(",") if part.strip()]
+
+    output_path = Path(args.output)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    variant_root = Path(args.variant_root)
+    answer_output_dir = Path(args.answer_output_dir) if args.answer_output_dir else output_path.parent / f"{output_path.stem}_answers"
+    answer_output_dir.mkdir(parents=True, exist_ok=True)
 
     config = load_config()
     client = GPTMessagesClient(config)
     dataset_contexts = load_dataset_contexts(dataset_ids, client)
     summary_rows = []
     for variant_file in variant_files:
-        row = summarize_variant_results(dataset_contexts, variant_file, client)
+        row = summarize_variant_results(
+            dataset_contexts,
+            variant_file,
+            client,
+            variant_root=variant_root,
+            answer_output_dir=answer_output_dir,
+        )
         summary_rows.append(row)
         print(f"finished variant={row['variant']} avg_delta={row['avg_delta']:+.2f}")
 
-    output_path = Path(args.output)
-    output_path.parent.mkdir(parents=True, exist_ok=True)
     payload = {
         "datasets": dataset_ids,
         "variants": summary_rows,
+        "variant_root": str(variant_root),
+        "answer_output_dir": str(answer_output_dir),
     }
     output_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     render_text(summary_rows, dataset_ids)
