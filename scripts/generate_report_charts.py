@@ -80,16 +80,24 @@ def chart_route_delta_comparison():
     for bar, delta, ci_low in zip(bars1, deltas, ci_lows):
         ax1.text(bar.get_x() + bar.get_width() / 2, ci_low - 1.5, f"{delta:.1f}", ha="center", va="top", fontsize=8, fontweight="bold")
 
-    # Right: Variance + Win Rate
-    ax3 = ax1.twinx()
-    ax3.scatter(x, variances, color="#F18F01", s=60, zorder=5, marker="^", label="Variance")
-    ax3.set_ylabel("Mean Total Variance", color="#F18F01")
-    ax3.tick_params(axis="y", labelcolor="#F18F01")
+    # Right: Variance + Win Rate (now actually drawn on ax2)
+    x2 = np.arange(len(variants))
+    w2 = 0.3
+    bars_var = ax2.bar(x2, variances, w2, color="#F18F01", alpha=0.7, label="Mean Total Variance")
+    ax2.set_ylabel("Mean Total Variance", color="#F18F01")
+    ax2.tick_params(axis="y", labelcolor="#F18F01")
+    ax2.set_title("Route Variance & Win Rate")
+    ax2.set_xticks(x2)
+    ax2.set_xticklabels(variants, rotation=30, ha="right")
+    ax2.grid(axis="y", alpha=0.3)
 
-    # Win rate as text annotations
+    for bar, var in zip(bars_var, variances):
+        ax2.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 0.3, f"{var:.1f}", ha="center", fontsize=8, fontweight="bold")
+
+    # Win rate annotations on ax2
     for i, (vr, var) in enumerate(zip(win_rates, variances)):
         color = "#2E86AB" if vr >= 100 else "#A23B72"
-        ax1.annotate(f"WR:{vr:.0f}%", (x[i], deltas[i] + 3), ha="center", fontsize=8, color=color, fontweight="bold")
+        ax2.annotate(f"WR:{vr:.0f}%", (x2[i], variances[i] + 1.5), ha="center", fontsize=9, color=color, fontweight="bold")
 
     fig.tight_layout()
     fig.savefig(str(REPORT_CHART_DIR / "route_delta_comparison.png"), bbox_inches="tight")
