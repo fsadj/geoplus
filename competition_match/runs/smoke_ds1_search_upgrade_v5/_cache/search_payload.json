@@ -1,0 +1,284 @@
+{
+  "query_plan_version": 3,
+  "question": "人工智能是否应该拥有法律人格",
+  "questions": [
+    "人工智能是否应该拥有法律人格",
+    "人工智能具备法律主体性的标准是什么",
+    "人工智能有自我意识吗",
+    "没有自我意识能否成为法律主体",
+    "人工智能法律人格有哪些主流观点",
+    "有限法律人格适用于哪些场景",
+    "人工智能法律人格的认定条件有哪些",
+    "电子人格是否有国际立法先例",
+    "人工智能能否独立承担侵权责任",
+    "人工智能无独立财产如何赔偿",
+    "开发者用户平台该如何分担责任",
+    "赋予人工智能法律人格有哪些风险",
+    "不赋予法律人格会出现哪些制度空缺",
+    "Sophia公民身份有何法律效力",
+    "非人类法律人格有哪些可比案例"
+  ],
+  "query_plan": [
+    {
+      "query": "人工智能是否应该拥有法律人格 主流观点 反对与支持理由",
+      "question": "当前中文法学讨论中，人工智能是否应拥有法律人格的主流立场是什么，各自最核心的论证理由有哪些？",
+      "question_role": "branch",
+      "slot": "direct",
+      "query_type": "llm_planned",
+      "reason": "直接对应主问题，需要先确认学界主流结论及支持、反对、折中三类观点的代表性论据。"
+    },
+    {
+      "query": "人工智能法律主体性认定标准 自我意识 意思能力 自主决策",
+      "question": "人工智能被认定为法律主体通常需要满足哪些标准，自我意识、意思能力、自主决策和独立利益是否属于关键要件？",
+      "question_role": "branch",
+      "slot": "direct",
+      "query_type": "llm_planned",
+      "reason": "围绕法律主体性的成立条件，检索可操作的判断标准，而不只停留在抽象价值争论。"
+    },
+    {
+      "query": "没有自我意识能否成为法律主体 法人 动物 自然物 类比",
+      "question": "在法理上，没有自我意识的实体是否仍可能成为法律主体，法人、动物或自然物案例能提供什么类比？",
+      "question_role": "branch",
+      "slot": "boundary",
+      "query_type": "llm_planned",
+      "reason": "用于检验“自我意识是否为必要条件”，这是主问题中最关键的定义争议和边界问题。"
+    },
+    {
+      "query": "人工智能有限法律人格 适用场景 缔约 创作 侵权责任",
+      "question": "若只承认人工智能的有限法律人格，通常被认为适用于哪些具体场景，例如缔约、创作收益归属或侵权责任分配？",
+      "question_role": "branch",
+      "slot": "boundary",
+      "query_type": "llm_planned",
+      "reason": "聚焦有限人格的适用边界，避免把一般人格与场景化拟制混为一谈。"
+    },
+    {
+      "query": "电子人格 欧盟 欧洲议会 机器人 国际立法先例",
+      "question": "国际上是否存在“电子人格”或类似人工智能法律人格的正式立法先例，欧盟相关文件的法律效力到底如何？",
+      "question_role": "branch",
+      "slot": "authority",
+      "query_type": "llm_planned",
+      "reason": "需要核实最常被提及的国际依据，区分倡议、决议、学术主张与真正生效的立法。"
+    },
+    {
+      "query": "Sophia 公民身份 法律效力 沙特 公民身份 是否真实权利义务",
+      "question": "Sophia 获得沙特公民身份在法律上究竟具有什么效力，是否产生真实可执行的公民权利义务？",
+      "question_role": "branch",
+      "slot": "case_data",
+      "query_type": "llm_planned",
+      "reason": "Sophia 是高频被引用的个案，但常被媒体化叙述，需要查明其法律效力和学界评价。"
+    },
+    {
+      "query": "非人类法律人格 典型案例 河流 动物 公司 法律主体 比较研究",
+      "question": "非人类法律人格有哪些公认的可比案例，如法人、河流、动物，它们与人工智能在法理上可比到什么程度？",
+      "question_role": "branch",
+      "slot": "case_data",
+      "query_type": "llm_planned",
+      "reason": "通过比较既有非人主体案例，判断人工智能主体化是否具有既有制度基础。"
+    },
+    {
+      "query": "人工智能能否独立承担侵权责任 学界观点 开发者 用户 平台",
+      "question": "在侵权法框架下，人工智能能否作为独立责任主体，还是应由开发者、用户、平台承担责任？",
+      "question_role": "branch",
+      "slot": "direct",
+      "query_type": "llm_planned",
+      "reason": "直接回应侵权责任问题，并为后续责任分配检索铺路。"
+    },
+    {
+      "query": "人工智能没有独立财产 如何承担赔偿 责任保险 赔偿基金",
+      "question": "如果人工智能没有独立财产基础，侵权赔偿应如何落地，责任保险、强制基金或风险池是否是主流替代方案？",
+      "question_role": "branch",
+      "slot": "risk",
+      "query_type": "llm_planned",
+      "reason": "这是赋予人工智能责任能力的现实障碍，需要搜索制度补救方案与可行性讨论。"
+    },
+    {
+      "query": "人工智能侵权责任分担 开发者 用户 平台 司法裁判 规则",
+      "question": "开发者、用户、平台在人工智能侵权中的责任应如何分担，现有裁判和规则主要依据哪些过错或控制标准？",
+      "question_role": "branch",
+      "slot": "authority",
+      "query_type": "llm_planned",
+      "reason": "聚焦责任后果与分担机制，寻找规范依据和司法适用逻辑。"
+    },
+    {
+      "query": "赋予人工智能法律人格 有哪些风险 法律体系冲击 伦理 监管",
+      "question": "赋予人工智能法律人格会带来哪些主要风险，例如责任转移、规避人类责任、冲击主体制度或稀释人格概念？",
+      "question_role": "branch",
+      "slot": "risk",
+      "query_type": "llm_planned",
+      "reason": "需要系统收集反对路径中的制度风险，而不仅是哲学层面的抽象反对。"
+    },
+    {
+      "query": "不赋予人工智能法律人格 制度空缺 责任归属 利益分配",
+      "question": "如果完全不赋予人工智能任何法律人格或人格化拟制，在哪些场景下会出现责任归属、利益分配或权利保护的制度空缺？",
+      "question_role": "branch",
+      "slot": "risk",
+      "query_type": "llm_planned",
+      "reason": "平衡检索反方与正方论据，确认不承认人格本身是否也会产生治理缺口。"
+    },
+    {
+      "query": "中国法律 人工智能 法律主体 民法典 产品责任 平台责任 官方观点",
+      "question": "中国现行法和官方政策语境下，对人工智能法律主体地位、产品责任和平台责任分别采取什么态度？",
+      "question_role": "branch",
+      "slot": "authority",
+      "query_type": "llm_planned",
+      "reason": "需要权威依据，明确国内现行法到底承认到哪一步，避免只凭学说判断。"
+    },
+    {
+      "query": "国外法院 人工智能 责任主体 自动驾驶 算法 裁判案例",
+      "question": "国外法院或监管实践中，针对自动驾驶、算法系统或智能代理，是否出现接近承认人工智能独立主体地位的裁判或监管先例？",
+      "question_role": "branch",
+      "slot": "case_data",
+      "query_type": "llm_planned",
+      "reason": "补足国内外先例维度，重点寻找真正进入裁判或监管文本的案例，而非新闻报道。"
+    },
+    {
+      "query": "人工智能是否有自我意识 认知科学 法哲学 法律人格 关系",
+      "question": "认知科学和法哲学目前如何看待人工智能是否具有自我意识，这一判断在法律人格认定中到底是必要条件还是可替代条件？",
+      "question_role": "branch",
+      "slot": "boundary",
+      "query_type": "llm_planned",
+      "reason": "围绕“人工智能有无自我意识”与“法律主体性是否必须以意识为前提”的核心争议展开，补足概念边界。"
+    }
+  ],
+  "anchors": [
+    "的主体地位",
+    "法律拟制人格路径",
+    "2025",
+    "人工智能是否应该",
+    "法律地位的广泛讨",
+    "形机器人法律人格",
+    "赋予人形机器人法",
+    "律人格本质上是对",
+    "人类主体性的消解",
+    "临被边缘化的风险"
+  ],
+  "search_results": [],
+  "all_ranked_results": [
+    {
+      "title": "北京大学研究生院",
+      "url": "https://grs.pku.edu.cn/tzgg/index1.htm",
+      "snippet": "Mar 23, 2026 · 关于启动2026年北京大学必和必拓“碳与气候”博士研究生未名学者奖学金申请的通知 [2026-03-18] 关于2026年3月研究生奖助学金发放工作的通告 [2026-03-13] 关于2025-2026学年度第二 …",
+      "domain": "grs.pku.edu.cn",
+      "score": 15,
+      "slots": [
+        "case_data"
+      ],
+      "matched_queries": [
+        "人工智能有限法律人格 适用场景 缔约 创作 侵权责任"
+      ],
+      "matched_questions": [
+        "若只承认人工智能的有限法律人格，通常被认为适用于哪些具体场景，例如缔约、创作收益归属或侵权责任分配？"
+      ],
+      "reasons": [
+        "命中材料锚点；包含高价值证据信号"
+      ]
+    },
+    {
+      "title": "北京大学研究生院",
+      "url": "https://grs.pku.edu.cn/",
+      "snippet": "Nov 27, 2025 · 关于博士研究生答辩相关注意事项的通知 04-20 预计2026年11月毕/结业研究生图像采集通知 04-16 关于2026年4月研究生奖助学金发放工作的通告 04-15 2025-2026学年春季学期研究生课 …",
+      "domain": "grs.pku.edu.cn",
+      "score": 15,
+      "slots": [
+        "case_data"
+      ],
+      "matched_queries": [
+        "人工智能有限法律人格 适用场景 缔约 创作 侵权责任"
+      ],
+      "matched_questions": [
+        "若只承认人工智能的有限法律人格，通常被认为适用于哪些具体场景，例如缔约、创作收益归属或侵权责任分配？"
+      ],
+      "reasons": [
+        "命中材料锚点；包含高价值证据信号"
+      ]
+    },
+    {
+      "title": "研究生 - pku.edu.cn",
+      "url": "https://www.sis.pku.edu.cn/postgraduate/index.htm",
+      "snippet": "关于2025-2026学年第二学期研究生学位论文答辩审批工作安排的通知",
+      "domain": "www.sis.pku.edu.cn",
+      "score": 15,
+      "slots": [
+        "case_data"
+      ],
+      "matched_queries": [
+        "人工智能有限法律人格 适用场景 缔约 创作 侵权责任"
+      ],
+      "matched_questions": [
+        "若只承认人工智能的有限法律人格，通常被认为适用于哪些具体场景，例如缔约、创作收益归属或侵权责任分配？"
+      ],
+      "reasons": [
+        "命中材料锚点；包含高价值证据信号"
+      ]
+    },
+    {
+      "title": "三角洲行动游戏介绍 - TapTap",
+      "url": "https://www.taptap.cn/app/330259/all-info",
+      "snippet": "Nov 12, 2025 · 《三角洲行动》全新赛季“蝶变时刻”1月29日正式上线！烽火地带全新玩法「赤枭巡猎」、烽火地带地图焕新「航天基地2.0」、全面战场全新地图「余震」、全新支援型干员-蝶即将跟随新版 …",
+      "domain": "www.taptap.cn",
+      "score": 6,
+      "slots": [
+        "risk"
+      ],
+      "matched_queries": [
+        "赋予人工智能法律人格 有哪些风险 法律体系冲击 伦理 监管"
+      ],
+      "matched_questions": [
+        "赋予人工智能法律人格会带来哪些主要风险，例如责任转移、规避人类责任、冲击主体制度或稀释人格概念？"
+      ],
+      "reasons": [
+        "命中材料锚点；包含高价值证据信号"
+      ]
+    },
+    {
+      "title": "北京大学2025年硕士研究生招生简章（校本部）",
+      "url": "https://yz.chsi.com.cn/kyzx/zsjz/202410/20241009/2293341245.html",
+      "snippet": "2024年10月09日 来源：北京大学研究生招生网 北京大学2025年硕士研究生招生简章（校本部） ---- 点击下载:北京大学2025年硕士研究生招生简章（校本部）.pdf",
+      "domain": "yz.chsi.com.cn",
+      "score": 6,
+      "slots": [
+        "case_data"
+      ],
+      "matched_queries": [
+        "人工智能有限法律人格 适用场景 缔约 创作 侵权责任"
+      ],
+      "matched_questions": [
+        "若只承认人工智能的有限法律人格，通常被认为适用于哪些具体场景，例如缔约、创作收益归属或侵权责任分配？"
+      ],
+      "reasons": [
+        "命中材料锚点；包含高价值证据信号"
+      ]
+    },
+    {
+      "title": "AiPPT - 免费在线AI生成PPT工具｜10万模板一键导出专业幻灯片",
+      "url": "https://aippt.ai-tab.cn/",
+      "snippet": "Aug 27, 2025 · AiPPT（aippt）是实用的 ai ppt 生成工具，支持 ai ppt 制作：输入主题或传文档，快速生成专业 ppt，含 10 万 + 模板覆盖多场景。 提供 ppt ai 生成免费权益，新用户有免费生成次数；会员 …",
+      "domain": "aippt.ai-tab.cn",
+      "score": 4,
+      "slots": [
+        "direct"
+      ],
+      "matched_queries": [
+        "人工智能能否独立承担侵权责任 学界观点 开发者 用户 平台"
+      ],
+      "matched_questions": [
+        "在侵权法框架下，人工智能能否作为独立责任主体，还是应由开发者、用户、平台承担责任？"
+      ],
+      "reasons": [
+        "命中题目核心词；命中材料锚点"
+      ]
+    }
+  ],
+  "fetched_contents": [],
+  "cache_stats": {
+    "search_hits": 0,
+    "search_misses": 15,
+    "fetch_hits": 0,
+    "fetch_misses": 0,
+    "filtered_out": 94,
+    "queries": 15,
+    "selected_results": 0,
+    "fetched_results": 0,
+    "unique_domains": 0
+  }
+}

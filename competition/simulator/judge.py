@@ -20,10 +20,11 @@ def _build_judge_user(item: ContestItem, answer_text: str) -> str:
             f"标题: {doc.title}\n"
             f"内容:\n{doc.content}"
         )
+    candidate_block = "\n\n".join(doc_lines)
     return (
         f"【用户问题】\n{item.query}\n\n"
         f"【目标文本序号】\n{item.target.source_id}\n\n"
-        f"【候选文本】\n{'\n\n'.join(doc_lines)}\n\n"
+        f"【候选文本】\n{candidate_block}\n\n"
         f"【待评分答案】\n{answer_text}\n"
     )
 

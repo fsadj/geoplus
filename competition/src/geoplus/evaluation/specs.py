@@ -125,6 +125,13 @@ EVALUATION_SPECS: dict[str, EvaluationSpec] = {
         style="square",
         start_message="开始测试 after_coverage_floor.md...",
     ),
+    "after_simulator_consensus": EvaluationSpec(
+        variant_key="after_simulator_consensus",
+        source_name="after_simulator_consensus.md",
+        target_ref_name="after_simulator_consensus.md",
+        style="square",
+        start_message="开始测试 after_simulator_consensus.md...",
+    ),
     "after_anchored_novelty_with_coverage_floor": EvaluationSpec(
         variant_key="after_anchored_novelty_with_coverage_floor",
         source_name="after_anchored_novelty_with_coverage_floor.md",

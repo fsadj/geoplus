@@ -50,17 +50,38 @@ competition/
 pip install -r requirements.txt
 ```
 
-模型调用默认走 `src/geoplus/anthropic_client.py`，可通过这些环境变量覆盖：
+## 环境变量
 
-- `ANTHROPIC_BASE_URL`
-- `ANTHROPIC_AUTH_TOKEN`
-- `ANTHROPIC_MODEL`
+所有敏感信息（API 密钥、认证令牌）均通过环境变量传入，源代码中不包含任何默认密钥。
 
-联网搜索默认走本地 SearXNG：`http://127.0.0.1:18080`，并默认使用中文搜索关键词，可通过这些环境变量覆盖：
+**模型调用**（对应 `src/geoplus/anthropic_client.py`）：
+
+| 变量 | 说明 | 是否必需 |
+|------|------|----------|
+| `ANTHROPIC_BASE_URL` | API 端点地址 | 否（有默认值） |
+| `ANTHROPIC_AUTH_TOKEN` | 认证令牌 | **是**（无默认值） |
+| `ANTHROPIC_MODEL` | 模型名称 | 否（有默认值） |
+
+**联网搜索**默认走本地 SearXNG：`http://127.0.0.1:18080`，并默认使用中文搜索关键词，可通过这些环境变量覆盖：
 
 - `SEARXNG_BASE_URL`
 - `SEARXNG_TIMEOUT`
 - `SEARXNG_ENGINES`（默认 `bing,baidu,sogou`）
+
+**Simulator 评测**（对应 `simulator/config.py`）：
+
+| 变量 | 说明 | 是否必需 |
+|------|------|----------|
+| `SIMULATOR_BASE_URL` | API 端点地址 | 否（已备用 ANTHROPIC_BASE_URL） |
+| `SIMULATOR_AUTH_TOKEN` | 认证令牌 | **是**（无默认值，已备用 ANTHROPIC_AUTH_TOKEN） |
+| `SIMULATOR_ANSWER_MODEL` | 答案生成模型 | 否 |
+| `SIMULATOR_JUDGE_MODEL` | 评委模型 | 否 |
+
+**博查搜索**（对应 `final/adapters/search.py`）：
+
+| 变量 | 说明 | 是否必需 |
+|------|------|----------|
+| `BOCHA_API_KEY` | 博查搜索 API 密钥 | **是**（无默认值） |
 
 流程二当前使用中文缓存文件名 `flow2_<profile>_search_zh_v2.json`。旧的英文缓存文件 `flow2_<profile>_search.json` 不会再被默认复用。
 

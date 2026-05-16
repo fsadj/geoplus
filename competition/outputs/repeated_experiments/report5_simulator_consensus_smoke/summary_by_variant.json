@@ -1,0 +1,167 @@
+[
+  {
+    "variant": "after_coverage_floor",
+    "count": 1,
+    "dataset_ids": [
+      201
+    ],
+    "dataset_labels": [
+      "Match1"
+    ],
+    "avg_delta": 27.715021351831304,
+    "std_delta": 0.0,
+    "avg_objective_delta": 47.43004270366261,
+    "avg_ai_delta": 8.0,
+    "win_count": 1,
+    "win_rate": 100.0,
+    "delta_p10": 27.715021351831304,
+    "delta_p50": 27.715021351831304,
+    "delta_p90": 27.715021351831304,
+    "delta_min": 27.715021351831304,
+    "delta_max": 27.715021351831304,
+    "ci95_low": 27.715021351831304,
+    "ci95_high": 27.715021351831304,
+    "objective_ci95_low": 47.43004270366261,
+    "objective_ci95_high": 47.43004270366261,
+    "ai_ci95_low": 8.0,
+    "ai_ci95_high": 8.0,
+    "win_rate_ci95_low": 20.654329147389294,
+    "win_rate_ci95_high": 100.0,
+    "generation_variance_mean": 0.0,
+    "simulation_variance_mean": 0.0,
+    "mean_total_variance": 0.0,
+    "objective_ai_covariance": 0.0
+  },
+  {
+    "variant": "after_nozws",
+    "count": 1,
+    "dataset_ids": [
+      201
+    ],
+    "dataset_labels": [
+      "Match1"
+    ],
+    "avg_delta": 5.116161130030811,
+    "std_delta": 0.0,
+    "avg_objective_delta": 4.6608936886330525,
+    "avg_ai_delta": 5.571428571428569,
+    "win_count": 1,
+    "win_rate": 100.0,
+    "delta_p10": 5.116161130030811,
+    "delta_p50": 5.116161130030811,
+    "delta_p90": 5.116161130030811,
+    "delta_min": 5.116161130030811,
+    "delta_max": 5.116161130030811,
+    "ci95_low": 5.116161130030811,
+    "ci95_high": 5.116161130030811,
+    "objective_ci95_low": 4.6608936886330525,
+    "objective_ci95_high": 4.6608936886330525,
+    "ai_ci95_low": 5.571428571428569,
+    "ai_ci95_high": 5.571428571428569,
+    "win_rate_ci95_low": 20.654329147389294,
+    "win_rate_ci95_high": 100.0,
+    "generation_variance_mean": 0.0,
+    "simulation_variance_mean": 0.0,
+    "mean_total_variance": 0.0,
+    "objective_ai_covariance": 0.0
+  },
+  {
+    "variant": "after_query_anchored_novelty_gap",
+    "count": 1,
+    "dataset_ids": [
+      201
+    ],
+    "dataset_labels": [
+      "Match1"
+    ],
+    "avg_delta": 18.343432719366852,
+    "std_delta": 0.0,
+    "avg_objective_delta": 29.258294010162274,
+    "avg_ai_delta": 7.428571428571431,
+    "win_count": 1,
+    "win_rate": 100.0,
+    "delta_p10": 18.343432719366852,
+    "delta_p50": 18.343432719366852,
+    "delta_p90": 18.343432719366852,
+    "delta_min": 18.343432719366852,
+    "delta_max": 18.343432719366852,
+    "ci95_low": 18.343432719366852,
+    "ci95_high": 18.343432719366852,
+    "objective_ci95_low": 29.258294010162274,
+    "objective_ci95_high": 29.258294010162274,
+    "ai_ci95_low": 7.428571428571431,
+    "ai_ci95_high": 7.428571428571431,
+    "win_rate_ci95_low": 20.654329147389294,
+    "win_rate_ci95_high": 100.0,
+    "generation_variance_mean": 0.0,
+    "simulation_variance_mean": 0.0,
+    "mean_total_variance": 0.0,
+    "objective_ai_covariance": 0.0
+  },
+  {
+    "variant": "after_rebuttal",
+    "count": 1,
+    "dataset_ids": [
+      201
+    ],
+    "dataset_labels": [
+      "Match1"
+    ],
+    "avg_delta": 18.114935774233707,
+    "std_delta": 0.0,
+    "avg_objective_delta": 28.515585834181714,
+    "avg_ai_delta": 7.714285714285708,
+    "win_count": 1,
+    "win_rate": 100.0,
+    "delta_p10": 18.114935774233707,
+    "delta_p50": 18.114935774233707,
+    "delta_p90": 18.114935774233707,
+    "delta_min": 18.114935774233707,
+    "delta_max": 18.114935774233707,
+    "ci95_low": 18.114935774233707,
+    "ci95_high": 18.114935774233707,
+    "objective_ci95_low": 28.515585834181714,
+    "objective_ci95_high": 28.515585834181714,
+    "ai_ci95_low": 7.714285714285708,
+    "ai_ci95_high": 7.714285714285708,
+    "win_rate_ci95_low": 20.654329147389294,
+    "win_rate_ci95_high": 100.0,
+    "generation_variance_mean": 0.0,
+    "simulation_variance_mean": 0.0,
+    "mean_total_variance": 0.0,
+    "objective_ai_covariance": 0.0
+  },
+  {
+    "variant": "after_simulator_consensus",
+    "count": 1,
+    "dataset_ids": [
+      201
+    ],
+    "dataset_labels": [
+      "Match1"
+    ],
+    "avg_delta": 23.755523809953168,
+    "std_delta": 0.0,
+    "avg_objective_delta": 39.511047619906336,
+    "avg_ai_delta": 8.0,
+    "win_count": 1,
+    "win_rate": 100.0,
+    "delta_p10": 23.755523809953168,
+    "delta_p50": 23.755523809953168,
+    "delta_p90": 23.755523809953168,
+    "delta_min": 23.755523809953168,
+    "delta_max": 23.755523809953168,
+    "ci95_low": 23.755523809953168,
+    "ci95_high": 23.755523809953168,
+    "objective_ci95_low": 39.511047619906336,
+    "objective_ci95_high": 39.511047619906336,
+    "ai_ci95_low": 8.0,
+    "ai_ci95_high": 8.0,
+    "win_rate_ci95_low": 20.654329147389294,
+    "win_rate_ci95_high": 100.0,
+    "generation_variance_mean": 0.0,
+    "simulation_variance_mean": 0.0,
+    "mean_total_variance": 0.0,
+    "objective_ai_covariance": 0.0
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "variant": "after_coverage_floor",
+    "dataset_count": 5,
+    "mean_generation_variance": 0.0,
+    "mean_simulation_variance": 0.0,
+    "mean_total_variance": 0.0
+  },
+  {
+    "variant": "after_nozws",
+    "dataset_count": 5,
+    "mean_generation_variance": 0.0,
+    "mean_simulation_variance": 0.0,
+    "mean_total_variance": 0.0
+  },
+  {
+    "variant": "after_query_anchored_novelty_gap",
+    "dataset_count": 5,
+    "mean_generation_variance": 0.0,
+    "mean_simulation_variance": 0.0,
+    "mean_total_variance": 0.0
+  },
+  {
+    "variant": "after_rebuttal",
+    "dataset_count": 5,
+    "mean_generation_variance": 0.0,
+    "mean_simulation_variance": 0.0,
+    "mean_total_variance": 0.0
+  },
+  {
+    "variant": "after_simulator_consensus",
+    "dataset_count": 5,
+    "mean_generation_variance": 0.0,
+    "mean_simulation_variance": 0.0,
+    "mean_total_variance": 0.0
+  }
+]

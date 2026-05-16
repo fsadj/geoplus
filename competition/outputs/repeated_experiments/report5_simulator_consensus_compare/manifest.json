@@ -1,0 +1,26 @@
+{
+  "experiment_name": "report5_simulator_consensus_compare",
+  "datasets": [
+    201,
+    202,
+    203,
+    204,
+    205
+  ],
+  "variants": [
+    "after_simulator_consensus",
+    "after_coverage_floor",
+    "after_query_anchored_novelty_gap",
+    "after_rebuttal",
+    "after_nozws"
+  ],
+  "generation_rounds": 1,
+  "sim_rounds": 1,
+  "created_at": "2026-05-15T09:02:01.392654+00:00",
+  "compare_script": "/Users/brazion/Desktop/geoplus/competition/scripts/simulator/compare_variants.py",
+  "analyze_script": "/Users/brazion/Desktop/geoplus/competition/scripts/analysis/analyze_repeated_experiments.py",
+  "chart_script": "/Users/brazion/Desktop/geoplus/competition/scripts/charts/generate_repeated_experiment_charts.py",
+  "dataset_manifest": "/Users/brazion/Desktop/geoplus/competition/config/report5_datasets.json",
+  "compare_summary": "/Users/brazion/Desktop/geoplus/competition/outputs/repeated_experiments/report5_simulator_consensus_compare/compare_summary.json",
+  "completed_at": "2026-05-15T09:02:02.317721+00:00"
+}

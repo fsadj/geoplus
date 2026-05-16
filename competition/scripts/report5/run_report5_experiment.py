@@ -33,6 +33,7 @@ DISPLAY_LABELS = {
     "after_rebuttal_extended": "Rebuttal Extended",
     "after_coverage_floor": "Coverage Floor",
     "after_query_anchored_novelty_gap": "Anchored Novelty",
+    "after_simulator_consensus": "Simulator Consensus",
 }
 
 

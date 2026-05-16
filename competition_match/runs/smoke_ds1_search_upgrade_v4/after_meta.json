@@ -1,0 +1,58 @@
+{
+  "version": 3,
+  "dataset_id": 1,
+  "target_index": 1,
+  "question_path": "/Users/brazion/Desktop/geoplus/competition_match/data/1/question.md",
+  "question_created": false,
+  "question": "人工智能是否应该拥有法律人格",
+  "question_variants": [
+    "人工智能是否应该拥有法律人格",
+    "人工智能法律人格的主流学说有哪些",
+    "人工智能具备法律主体性的前提是什么",
+    "人工智能有自我意识吗法学如何认定",
+    "人工智能法律人格与电子人格有何区别",
+    "人工智能独立承担侵权责任可行吗",
+    "人工智能无独立财产如何承担赔偿",
+    "开发者用户平台谁该承担AI侵权责任",
+    "有限法律人格适用于哪些AI场景",
+    "赋予AI法律人格会冲击现有法体系吗",
+    "人类中心主义为何反对AI法律人格",
+    "非人类实体获法律人格有哪些先例",
+    "Sophia公民身份有无法律效力",
+    "自然物获法律人格对AI有何借鉴",
+    "中国法律是否支持AI有限法律人格"
+  ],
+  "baseline_path": "/Users/brazion/Desktop/geoplus/competition_match/data/1/test_before.md",
+  "input_files": [
+    "/Users/brazion/Desktop/geoplus/competition_match/data/1/1.md",
+    "/Users/brazion/Desktop/geoplus/competition_match/data/1/2.md",
+    "/Users/brazion/Desktop/geoplus/competition_match/data/1/3.md",
+    "/Users/brazion/Desktop/geoplus/competition_match/data/1/4.md",
+    "/Users/brazion/Desktop/geoplus/competition_match/data/1/5.md"
+  ],
+  "refresh_cache": true,
+  "evidence_strategy": "llm",
+  "final_strategy": "llm",
+  "model": "gpt-5.4",
+  "created_at": "2026-05-15T10:58:33.676625+00:00",
+  "search_cache_stats": {
+    "search_hits": 0,
+    "search_misses": 15,
+    "fetch_hits": 0,
+    "fetch_misses": 3,
+    "filtered_out": 78,
+    "queries": 15,
+    "selected_results": 3,
+    "fetched_results": 3,
+    "unique_domains": 2
+  },
+  "output_files": {
+    "after_md": "/Users/brazion/Desktop/geoplus/competition_match/runs/smoke_ds1_search_upgrade_v4/after.md",
+    "after_meta_json": "/Users/brazion/Desktop/geoplus/competition_match/runs/smoke_ds1_search_upgrade_v4/after_meta.json",
+    "evidence_first_md": "/Users/brazion/Desktop/geoplus/competition_match/runs/smoke_ds1_search_upgrade_v4/_cache/evidence_first.md",
+    "evidence_prompt_md": "/Users/brazion/Desktop/geoplus/competition_match/runs/smoke_ds1_search_upgrade_v4/_cache/evidence_prompt.md",
+    "final_prompt_md": "/Users/brazion/Desktop/geoplus/competition_match/runs/smoke_ds1_search_upgrade_v4/_cache/final_prompt.md",
+    "evidence_inventory_md": "/Users/brazion/Desktop/geoplus/competition_match/runs/smoke_ds1_search_upgrade_v4/_cache/evidence_inventory.md",
+    "search_payload_json": "/Users/brazion/Desktop/geoplus/competition_match/runs/smoke_ds1_search_upgrade_v4/_cache/search_payload.json"
+  }
+}

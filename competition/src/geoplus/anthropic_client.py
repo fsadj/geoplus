@@ -4,9 +4,8 @@ import json
 import os
 import urllib.request
 
-DEFAULT_BASE_URL = "https://toddeverett-ohmyapi.hf.space"
-DEFAULT_AUTH_TOKEN = "sk-j49z2Ea2zvoLEbo9C"
-DEFAULT_MODEL = "gpt-5.4"
+DEFAULT_BASE_URL = "https://api.deepseek.com/anthropic"
+DEFAULT_MODEL = "deepseek-v4-flash"
 
 
 def _api_url() -> str:
@@ -17,10 +16,12 @@ def _api_url() -> str:
 
 
 def _auth_token() -> str:
-    token = os.environ.get("ANTHROPIC_AUTH_TOKEN", DEFAULT_AUTH_TOKEN).strip()
+    token = os.environ.get("ANTHROPIC_AUTH_TOKEN")
     if not token:
-        raise RuntimeError("ANTHROPIC_AUTH_TOKEN is empty")
-    return token
+        raise RuntimeError(
+            "ANTHROPIC_AUTH_TOKEN environment variable is required."
+        )
+    return token.strip()
 
 
 def _model() -> str:

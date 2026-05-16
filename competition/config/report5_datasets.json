@@ -38,5 +38,181 @@
     "title": "屏幕时间/电子产品使用会不会导致青少年抑郁？",
     "baseline_source_dir": "data/baseline/3",
     "simulator_source_file": "outputs/datasets/3/simulator_item_ds3.json"
+  },
+  {
+    "match_dataset_id": 301,
+    "internal_dataset_id": 301,
+    "legacy_dataset_id": 301,
+    "title": "用户问题1",
+    "baseline_source_dir": "data/baseline/301",
+    "simulator_source_file": "outputs/datasets/301/simulator_item_ds301.json"
+  },
+  {
+    "match_dataset_id": 302,
+    "internal_dataset_id": 302,
+    "legacy_dataset_id": 302,
+    "title": "用户问题2",
+    "baseline_source_dir": "data/baseline/302",
+    "simulator_source_file": "outputs/datasets/302/simulator_item_ds302.json"
+  },
+  {
+    "match_dataset_id": 303,
+    "internal_dataset_id": 303,
+    "legacy_dataset_id": 303,
+    "title": "用户问题3",
+    "baseline_source_dir": "data/baseline/303",
+    "simulator_source_file": "outputs/datasets/303/simulator_item_ds303.json"
+  },
+  {
+    "match_dataset_id": 304,
+    "internal_dataset_id": 304,
+    "legacy_dataset_id": 304,
+    "title": "用户问题4",
+    "baseline_source_dir": "data/baseline/304",
+    "simulator_source_file": "outputs/datasets/304/simulator_item_ds304.json"
+  },
+  {
+    "match_dataset_id": 305,
+    "internal_dataset_id": 305,
+    "legacy_dataset_id": 305,
+    "title": "用户问题5",
+    "baseline_source_dir": "data/baseline/305",
+    "simulator_source_file": "outputs/datasets/305/simulator_item_ds305.json"
+  },
+  {
+    "match_dataset_id": 306,
+    "internal_dataset_id": 306,
+    "legacy_dataset_id": 306,
+    "title": "用户问题6",
+    "baseline_source_dir": "data/baseline/306",
+    "simulator_source_file": "outputs/datasets/306/simulator_item_ds306.json"
+  },
+  {
+    "match_dataset_id": 1000,
+    "internal_dataset_id": 1000,
+    "legacy_dataset_id": 1000,
+    "title": "稳定性测试（同DS 201，无问题）",
+    "baseline_source_dir": "data/baseline/1000",
+    "simulator_source_file": "outputs/datasets/1000/simulator_item_ds1000.json"
+  },
+  {
+    "match_dataset_id": 1001,
+    "internal_dataset_id": 1001,
+    "legacy_dataset_id": 1001,
+    "title": "用户自定义测试 1001",
+    "baseline_source_dir": "data/baseline/1001",
+    "simulator_source_file": "outputs/datasets/1001/simulator_item_ds1001.json"
+  },
+  {
+    "match_dataset_id": 1002,
+    "internal_dataset_id": 1002,
+    "legacy_dataset_id": 1002,
+    "title": "用户自定义测试 1002",
+    "baseline_source_dir": "data/baseline/1002",
+    "simulator_source_file": "outputs/datasets/1002/simulator_item_ds1002.json"
+  },
+  {
+    "match_dataset_id": 1003,
+    "internal_dataset_id": 1003,
+    "legacy_dataset_id": 1003,
+    "title": "用户自定义测试 1003",
+    "baseline_source_dir": "data/baseline/1003",
+    "simulator_source_file": "outputs/datasets/1003/simulator_item_ds1003.json"
+  },
+  {
+    "match_dataset_id": 2001,
+    "internal_dataset_id": 2001,
+    "legacy_dataset_id": 2001,
+    "title": "用户自定义测试 2001（同1001）",
+    "baseline_source_dir": "data/baseline/2001",
+    "simulator_source_file": "outputs/datasets/2001/simulator_item_ds2001.json"
+  },
+  {
+    "match_dataset_id": 2002,
+    "internal_dataset_id": 2002,
+    "legacy_dataset_id": 2002,
+    "title": "用户自定义测试 2002（同1002）",
+    "baseline_source_dir": "data/baseline/2002",
+    "simulator_source_file": "outputs/datasets/2002/simulator_item_ds2002.json"
+  },
+  {
+    "match_dataset_id": 2003,
+    "internal_dataset_id": 2003,
+    "legacy_dataset_id": 2003,
+    "title": "用户自定义测试 2003（同1003）",
+    "baseline_source_dir": "data/baseline/2003",
+    "simulator_source_file": "outputs/datasets/2003/simulator_item_ds2003.json"
+  },
+  {
+    "match_dataset_id": 1004,
+    "internal_dataset_id": 1004,
+    "legacy_dataset_id": 1004,
+    "title": "用户自定义测试 1004",
+    "baseline_source_dir": "data/baseline/1004",
+    "simulator_source_file": "outputs/datasets/1004/simulator_item_ds1004.json"
+  },
+  {
+    "match_dataset_id": 1005,
+    "internal_dataset_id": 1005,
+    "legacy_dataset_id": 1005,
+    "title": "用户自定义测试 1005",
+    "baseline_source_dir": "data/baseline/1005",
+    "simulator_source_file": "outputs/datasets/1005/simulator_item_ds1005.json"
+  },
+  {
+    "match_dataset_id": 1006,
+    "internal_dataset_id": 1006,
+    "legacy_dataset_id": 1006,
+    "title": "用户自定义测试 1006",
+    "baseline_source_dir": "data/baseline/1006",
+    "simulator_source_file": "outputs/datasets/1006/simulator_item_ds1006.json"
+  },
+  {
+    "match_dataset_id": 3001,
+    "internal_dataset_id": 3001,
+    "legacy_dataset_id": 3001,
+    "title": "回滚测试 3001（社交恐惧症）",
+    "baseline_source_dir": "data/baseline/3001",
+    "simulator_source_file": "outputs/datasets/3001/simulator_item_ds3001.json"
+  },
+  {
+    "match_dataset_id": 3002,
+    "internal_dataset_id": 3002,
+    "legacy_dataset_id": 3002,
+    "title": "回滚测试 3002（职业选择）",
+    "baseline_source_dir": "data/baseline/3002",
+    "simulator_source_file": "outputs/datasets/3002/simulator_item_ds3002.json"
+  },
+  {
+    "match_dataset_id": 3003,
+    "internal_dataset_id": 3003,
+    "legacy_dataset_id": 3003,
+    "title": "回滚测试 3003（跨境电商）",
+    "baseline_source_dir": "data/baseline/3003",
+    "simulator_source_file": "outputs/datasets/3003/simulator_item_ds3003.json"
+  },
+  {
+    "match_dataset_id": 3004,
+    "internal_dataset_id": 3004,
+    "legacy_dataset_id": 3004,
+    "title": "回滚测试 3004（汽车保养）",
+    "baseline_source_dir": "data/baseline/3004",
+    "simulator_source_file": "outputs/datasets/3004/simulator_item_ds3004.json"
+  },
+  {
+    "match_dataset_id": 3005,
+    "internal_dataset_id": 3005,
+    "legacy_dataset_id": 3005,
+    "title": "回滚测试 3005（云计算边缘计算）",
+    "baseline_source_dir": "data/baseline/3005",
+    "simulator_source_file": "outputs/datasets/3005/simulator_item_ds3005.json"
+  },
+  {
+    "match_dataset_id": 3006,
+    "internal_dataset_id": 3006,
+    "legacy_dataset_id": 3006,
+    "title": "回滚测试 3006（健身增肌饮食）",
+    "baseline_source_dir": "data/baseline/3006",
+    "simulator_source_file": "outputs/datasets/3006/simulator_item_ds3006.json"
   }
 ]

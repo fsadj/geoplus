@@ -1,0 +1,6 @@
+variant,dataset_id,dataset_label,match_dataset_id,legacy_dataset_id,title,count,win_rate,win_rate_ci95_low,win_rate_ci95_high,avg_delta,avg_objective_delta,avg_ai_delta
+after_coverage_floor,201,Match1,1,101,人工智能是否应该拥有法律人格,1,100.0000,20.6543,100.0000,27.715021,47.430043,8.000000
+after_nozws,201,Match1,1,101,人工智能是否应该拥有法律人格,1,100.0000,20.6543,100.0000,5.116161,4.660894,5.571429
+after_query_anchored_novelty_gap,201,Match1,1,101,人工智能是否应该拥有法律人格,1,100.0000,20.6543,100.0000,18.343433,29.258294,7.428571
+after_rebuttal,201,Match1,1,101,人工智能是否应该拥有法律人格,1,100.0000,20.6543,100.0000,18.114936,28.515586,7.714286
+after_simulator_consensus,201,Match1,1,101,人工智能是否应该拥有法律人格,1,100.0000,20.6543,100.0000,23.755524,39.511048,8.000000

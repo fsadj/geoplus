@@ -10,19 +10,22 @@ class SimulatorConfig:
     auth_token: str
     answer_model: str
     judge_model: str
-    answer_max_tokens: int = 12000
+    answer_max_tokens: int = 64000
     judge_max_tokens: int = 4000
-    timeout: int = 300
+    timeout: int = 600
 
 
-DEFAULT_BASE_URL = "https://toddeverett-ohmyapi.hf.space"
-DEFAULT_MODEL = "gpt-5.4"
-DEFAULT_TOKEN = "sk-j49z2Ea2zvoLEbo9C"
+DEFAULT_BASE_URL = "https://api.deepseek.com/anthropic"
+DEFAULT_MODEL = "deepseek-v4-pro"
 
 
 def load_config() -> SimulatorConfig:
     base_url = os.environ.get("SIMULATOR_BASE_URL") or os.environ.get("ANTHROPIC_BASE_URL") or DEFAULT_BASE_URL
-    auth_token = os.environ.get("SIMULATOR_AUTH_TOKEN") or os.environ.get("ANTHROPIC_AUTH_TOKEN") or DEFAULT_TOKEN
+    auth_token = os.environ.get("SIMULATOR_AUTH_TOKEN") or os.environ.get("ANTHROPIC_AUTH_TOKEN")
+    if not auth_token:
+        raise RuntimeError(
+            "API auth token is required. Set SIMULATOR_AUTH_TOKEN or ANTHROPIC_AUTH_TOKEN environment variable."
+        )
     answer_model = os.environ.get("SIMULATOR_ANSWER_MODEL") or os.environ.get("SIMULATOR_MODEL") or os.environ.get("ANTHROPIC_MODEL") or DEFAULT_MODEL
     judge_model = os.environ.get("SIMULATOR_JUDGE_MODEL") or answer_model
     return SimulatorConfig(

@@ -1,0 +1,580 @@
+{
+  "query_plan_version": 3,
+  "question": "人工智能是否应该拥有法律人格",
+  "questions": [
+    "人工智能是否应该拥有法律人格",
+    "人工智能具备法律主体性的标准是什么",
+    "人工智能有自我意识吗",
+    "电子人格是否已有权威法律依据",
+    "人工智能法律人格有哪些国际案例",
+    "Sophia公民身份有法律效力吗",
+    "AI无独立财产如何承担赔偿责任",
+    "AI侵权应由开发者还是使用者负责",
+    "有限法律人格适用于哪些场景",
+    "人工智能可否享有著作权或收益权",
+    "赋予AI人格会否冲击现有法体系",
+    "法律人格拟制的适用边界是什么",
+    "非人实体获法律人格有哪些先例",
+    "AI自主决策超出人类预见怎么办",
+    "中国学界对AI法律人格主流观点是什么"
+  ],
+  "query_plan": [
+    {
+      "query": "人工智能是否应当拥有法律人格 学界主流观点",
+      "question": "围绕主问题，当前中文法学讨论中对是否应赋予人工智能法律人格的主流结论是什么？",
+      "question_role": "branch",
+      "slot": "direct",
+      "query_type": "llm_planned",
+      "reason": "直接检索综述性论文、法学评论和学术会议观点，快速确认主流立场是全面否定、有限承认还是场景化折中。"
+    },
+    {
+      "query": "人工智能法律主体性的认定标准 是自我意识还是功能自主性",
+      "question": "人工智能具备法律主体性的标准，究竟应以自我意识为核心，还是以功能、自主决策能力和风险结构为核心？",
+      "question_role": "branch",
+      "slot": "boundary",
+      "query_type": "llm_planned",
+      "reason": "该问题聚焦定义争议，能够区分哲学主体性标准与法律拟制标准，避免把“智能强”直接等同于“可成为主体”。"
+    },
+    {
+      "query": "人工智能有自我意识吗 法哲学 法学观点",
+      "question": "现有法哲学和法学论证中，人工智能是否已被认为具有自我意识、意思自治或真正主观能动性？",
+      "question_role": "branch",
+      "slot": "boundary",
+      "query_type": "llm_planned",
+      "reason": "这是主体性争论的前提问题，能为是否可能赋予法律人格提供基础判断，尤其有助于检索反对说的理论依据。"
+    },
+    {
+      "query": "电子人格 欧盟决议 是否具有法律效力",
+      "question": "所谓“电子人格”是否已有成文法或具有约束力的权威法律依据，尤其欧盟层面的讨论是否只是倡议性文本？",
+      "question_role": "branch",
+      "slot": "authority",
+      "query_type": "llm_planned",
+      "reason": "可用于核实“电子人格”是否停留在政策或伦理层面，还是已经进入正式法律规范，直接回应权威依据问题。"
+    },
+    {
+      "query": "中国法学界 人工智能法律人格 否定说 折中说 肯定说",
+      "question": "中国学界关于人工智能法律人格的三类主要立场分别如何论证，哪一类更占主流？",
+      "question_role": "branch",
+      "slot": "authority",
+      "query_type": "llm_planned",
+      "reason": "该检索有助于定位国内核心期刊、法学院论文和学者综述，提炼中国学界主流观点及其代表性论据。"
+    },
+    {
+      "query": "有限法律人格 适用于哪些人工智能场景 自动驾驶 智能交易 医疗机器人",
+      "question": "如果只考虑有限法律人格，哪些具体场景最常被主张适用，例如自动驾驶、智能缔约、创作或医疗辅助？",
+      "question_role": "branch",
+      "slot": "boundary",
+      "query_type": "llm_planned",
+      "reason": "该问题聚焦适用边界，便于检索场景化制度设计，而不是泛泛讨论是否赋予完整人格。"
+    },
+    {
+      "query": "人工智能没有独立财产 如何承担侵权赔偿责任",
+      "question": "在人工智能缺乏独立财产和责任财产基础的情况下，拟制其承担赔偿责任在制度上如何落地？",
+      "question_role": "branch",
+      "slot": "risk",
+      "query_type": "llm_planned",
+      "reason": "这是反对电子人格的重要实务障碍，能够检索保险、基金、强制责任池等替代机制及其可行性。"
+    },
+    {
+      "query": "人工智能侵权责任 开发者 使用者 平台 谁承担",
+      "question": "当人工智能造成侵权时，开发者、部署者、使用者、平台方分别在何种条件下承担责任？",
+      "question_role": "branch",
+      "slot": "direct",
+      "query_type": "llm_planned",
+      "reason": "该检索直接对应责任后果问题，可获取传统产品责任、过错责任、平台义务和混合责任等主流方案。"
+    },
+    {
+      "query": "人工智能自主决策超出人类预见 归责规则 怎么处理",
+      "question": "当人工智能的自主决策超出开发者或使用者的可预见范围时，现有归责规则如何调整？",
+      "question_role": "branch",
+      "slot": "risk",
+      "query_type": "llm_planned",
+      "reason": "该问题能检索难案讨论和制度补丁，特别是可预见性、控制力和风险分配失衡下的归责修正。"
+    },
+    {
+      "query": "人工智能能否享有著作权 邻接权 收益权 法院观点",
+      "question": "人工智能是否可能在创作或交易中享有著作权、邻接性利益或收益分配权，司法和学界如何区分？",
+      "question_role": "branch",
+      "slot": "boundary",
+      "query_type": "llm_planned",
+      "reason": "这可帮助区分“享有收益”与“成为作者”两类不同权利结构，检索具体权利能力的边界。"
+    },
+    {
+      "query": "Sophia 公民身份 有法律效力吗 沙特 法律分析",
+      "question": "Sophia 被授予沙特“公民身份”是否具有实质法律效力，还是更接近宣传性或象征性事件？",
+      "question_role": "branch",
+      "slot": "case_data",
+      "query_type": "llm_planned",
+      "reason": "这是最常被引用的国际个案，需要核实其真实法律地位，防止把新闻事件误当作正式先例。"
+    },
+    {
+      "query": "人工智能法律人格 国际案例 汇总 欧盟 美国 日本 沙特",
+      "question": "目前有哪些可被视为人工智能法律人格或拟主体化讨论的国际案例，它们分别触及身份、责任还是权利问题？",
+      "question_role": "branch",
+      "slot": "case_data",
+      "query_type": "llm_planned",
+      "reason": "该检索用于系统收集国外先例和比较法材料，避免只引用单一热门个案。"
+    },
+    {
+      "query": "非人实体获得法律人格 先例 河流 动物 公司 法律比较",
+      "question": "在公司、河流、动物等非人实体被赋予法律人格的先例中，哪些制度逻辑可能被类比到人工智能，哪些不能？",
+      "question_role": "branch",
+      "slot": "case_data",
+      "query_type": "llm_planned",
+      "reason": "通过检索非人实体先例，可以识别法律人格拟制的历史脉络，同时为AI类比论提供支持或反证。"
+    },
+    {
+      "query": "赋予人工智能法律人格 会冲击现有法律体系吗",
+      "question": "赋予人工智能人格会对自然人、法人、责任法和权利体系带来哪些结构性冲击？",
+      "question_role": "branch",
+      "slot": "risk",
+      "query_type": "llm_planned",
+      "reason": "该问题对应制度风险评估，可检索对主体边界、责任转移、规避责任和资源配置错位的系统性质疑。"
+    },
+    {
+      "query": "法律人格拟制的适用边界 什么情况下不能扩张到人工智能",
+      "question": "法律人格拟制作为一种技术，其适用边界在哪里，哪些条件不足以支持将其扩张到人工智能？",
+      "question_role": "branch",
+      "slot": "authority",
+      "query_type": "llm_planned",
+      "reason": "该检索有助于寻找民法、法理学和比较法中的限缩论证，回答人格拟制并非无限扩张的权威依据。"
+    }
+  ],
+  "anchors": [
+    "的主体地位",
+    "法律拟制人格路径",
+    "2025",
+    "人工智能是否应该",
+    "法律地位的广泛讨",
+    "形机器人法律人格",
+    "赋予人形机器人法",
+    "律人格本质上是对",
+    "人类主体性的消解",
+    "临被边缘化的风险"
+  ],
+  "search_results": [
+    {
+      "title": "农产品免税发票，如何抵扣进项税",
+      "url": "https://12366.chinatax.gov.cn/nszx/onlinemessage/detail?id=eb1575e6a9774ad98d5470500fda2638",
+      "snippet": "Jun 29, 2024 · 根据《财政部 税务总局 海关总署关于深化增值税改革有关政策的公告》（财政部 税务总局 海关总署公告2019年第39号）规定：二、纳税人购进农产品，原适用10%扣除率的，扣除率调整 …",
+      "domain": "12366.chinatax.gov.cn",
+      "score": 16,
+      "slots": [
+        "risk"
+      ],
+      "matched_queries": [
+        "人工智能自主决策超出人类预见 归责规则 怎么处理"
+      ],
+      "matched_questions": [
+        "当人工智能的自主决策超出开发者或使用者的可预见范围时，现有归责规则如何调整？"
+      ],
+      "reasons": [
+        "命中题目核心词；包含高价值证据信号"
+      ]
+    },
+    {
+      "title": "Meaning, origin and history of the name Sophia",
+      "url": "https://www.behindthename.com/name/sophia",
+      "snippet": "Sep 26, 2025 · Legends about her probably arose as a result of a medieval misunderstanding of the phrase Hagia Sophia \"Holy Wisdom\", which is the name of a large basilica in Constantinople.",
+      "domain": "www.behindthename.com",
+      "score": 10,
+      "slots": [
+        "case_data"
+      ],
+      "matched_queries": [
+        "Sophia 公民身份 有法律效力吗 沙特 法律分析"
+      ],
+      "matched_questions": [
+        "Sophia 被授予沙特“公民身份”是否具有实质法律效力，还是更接近宣传性或象征性事件？"
+      ],
+      "reasons": [
+        "命中题目核心词；命中题目短语；命中材料锚点"
+      ]
+    },
+    {
+      "title": "Sophia英文名 Sophia名字含义 英文名",
+      "url": "https://en.oicq88.com/sophia.html",
+      "snippet": "Dec 8, 2025 · Sophia英文名什么意思的详细解释,包括Sophia英文名的含义、Sophia是什么意思、怎么读、起源、相关文化以及流行趋势分析等,让您全面了解Sophia英文名",
+      "domain": "en.oicq88.com",
+      "score": 10,
+      "slots": [
+        "case_data"
+      ],
+      "matched_queries": [
+        "Sophia 公民身份 有法律效力吗 沙特 法律分析"
+      ],
+      "matched_questions": [
+        "Sophia 被授予沙特“公民身份”是否具有实质法律效力，还是更接近宣传性或象征性事件？"
+      ],
+      "reasons": [
+        "命中题目核心词；命中题目短语；命中材料锚点"
+      ]
+    },
+    {
+      "title": "Quiz: How much do you know about Julius Caesar?",
+      "url": "https://www.folger.edu/blogs/shakespeare-and-beyond/quiz-how-much-do-you-know-about-julius-caesar/",
+      "snippet": "Sep 5, 2025 · In 2012 the Royal Shakespeare Company staged the first-ever, high-profile, all-black British Shakespeare production, Julius Caesar, set in Africa. The actor who played Brutus, Paterson …",
+      "domain": "www.folger.edu",
+      "score": 7,
+      "slots": [
+        "boundary"
+      ],
+      "matched_queries": [
+        "人工智能有自我意识吗 法哲学 法学观点"
+      ],
+      "matched_questions": [
+        "现有法哲学和法学论证中，人工智能是否已被认为具有自我意识、意思自治或真正主观能动性？"
+      ],
+      "reasons": [
+        "命中材料锚点"
+      ]
+    },
+    {
+      "title": "财税 [2017]37号文发布后，关于农产品抵扣，你需要知道这些",
+      "url": "https://www.shui5.cn/article/9f/112224.html",
+      "snippet": "May 8, 2026 · 财政部 国家税务总局新近颁布的《关于简并增值税税率有关政策的通知》（财税 [2017]37号），对购进的农产品适用税率及进项税抵扣办法均有较大调整。 今天小编就结合新旧政策 …",
+      "domain": "www.shui5.cn",
+      "score": 6,
+      "slots": [
+        "risk"
+      ],
+      "matched_queries": [
+        "人工智能自主决策超出人类预见 归责规则 怎么处理"
+      ],
+      "matched_questions": [
+        "当人工智能的自主决策超出开发者或使用者的可预见范围时，现有归责规则如何调整？"
+      ],
+      "reasons": [
+        "命中题目核心词；包含高价值证据信号"
+      ]
+    },
+    {
+      "title": "抖音网页版在线极速访问入口 抖音网页版无需登录直接浏览 ...",
+      "url": "https://www.php.cn/faq/1815440.html",
+      "snippet": "Dec 4, 2025 · 想要在线极速访问抖音网页版，并无需登录直接浏览精彩内容吗？ 方法非常简单。 抖音官方提供了网页版入口，让用户在电脑上也能享受沉浸式的短视频体验。 本文将为您详细介绍如何直 …",
+      "domain": "www.php.cn",
+      "score": 6,
+      "slots": [
+        "direct"
+      ],
+      "matched_queries": [
+        "人工智能是否应当拥有法律人格 学界主流观点"
+      ],
+      "matched_questions": [
+        "围绕主问题，当前中文法学讨论中对是否应赋予人工智能法律人格的主流结论是什么？"
+      ],
+      "reasons": [
+        "命中材料锚点；包含高价值证据信号"
+      ]
+    }
+  ],
+  "all_ranked_results": [
+    {
+      "title": "农产品免税发票，如何抵扣进项税",
+      "url": "https://12366.chinatax.gov.cn/nszx/onlinemessage/detail?id=eb1575e6a9774ad98d5470500fda2638",
+      "snippet": "Jun 29, 2024 · 根据《财政部 税务总局 海关总署关于深化增值税改革有关政策的公告》（财政部 税务总局 海关总署公告2019年第39号）规定：二、纳税人购进农产品，原适用10%扣除率的，扣除率调整 …",
+      "domain": "12366.chinatax.gov.cn",
+      "score": 16,
+      "slots": [
+        "risk"
+      ],
+      "matched_queries": [
+        "人工智能自主决策超出人类预见 归责规则 怎么处理"
+      ],
+      "matched_questions": [
+        "当人工智能的自主决策超出开发者或使用者的可预见范围时，现有归责规则如何调整？"
+      ],
+      "reasons": [
+        "命中题目核心词；包含高价值证据信号"
+      ]
+    },
+    {
+      "title": "Meaning, origin and history of the name Sophia",
+      "url": "https://www.behindthename.com/name/sophia",
+      "snippet": "Sep 26, 2025 · Legends about her probably arose as a result of a medieval misunderstanding of the phrase Hagia Sophia \"Holy Wisdom\", which is the name of a large basilica in Constantinople.",
+      "domain": "www.behindthename.com",
+      "score": 10,
+      "slots": [
+        "case_data"
+      ],
+      "matched_queries": [
+        "Sophia 公民身份 有法律效力吗 沙特 法律分析"
+      ],
+      "matched_questions": [
+        "Sophia 被授予沙特“公民身份”是否具有实质法律效力，还是更接近宣传性或象征性事件？"
+      ],
+      "reasons": [
+        "命中题目核心词；命中题目短语；命中材料锚点"
+      ]
+    },
+    {
+      "title": "Sophia英文名 Sophia名字含义 英文名",
+      "url": "https://en.oicq88.com/sophia.html",
+      "snippet": "Dec 8, 2025 · Sophia英文名什么意思的详细解释,包括Sophia英文名的含义、Sophia是什么意思、怎么读、起源、相关文化以及流行趋势分析等,让您全面了解Sophia英文名",
+      "domain": "en.oicq88.com",
+      "score": 10,
+      "slots": [
+        "case_data"
+      ],
+      "matched_queries": [
+        "Sophia 公民身份 有法律效力吗 沙特 法律分析"
+      ],
+      "matched_questions": [
+        "Sophia 被授予沙特“公民身份”是否具有实质法律效力，还是更接近宣传性或象征性事件？"
+      ],
+      "reasons": [
+        "命中题目核心词；命中题目短语；命中材料锚点"
+      ]
+    },
+    {
+      "title": "Sophia英文名-Sophia英文名什么意思-苏菲亚Sophia名字寓意 ...",
+      "url": "https://english.yw11.com/index/detail/sophia",
+      "snippet": "原 Sophia Patsalidou, known professionally as Sophia Patsalides, is a Greek Cypriot teen singer. She represented her nation at the Junior Eurovision Song Contest 2014 with her song \"I pio omorfi mera\".",
+      "domain": "english.yw11.com",
+      "score": 8,
+      "slots": [
+        "case_data"
+      ],
+      "matched_queries": [
+        "Sophia 公民身份 有法律效力吗 沙特 法律分析"
+      ],
+      "matched_questions": [
+        "Sophia 被授予沙特“公民身份”是否具有实质法律效力，还是更接近宣传性或象征性事件？"
+      ],
+      "reasons": [
+        "命中题目核心词；命中题目短语"
+      ]
+    },
+    {
+      "title": "Sophia Name Meaning, Origin, Popularity, Girl Names Like Sophia …",
+      "url": "https://www.mamanatural.com/baby-names/girls/sophia/",
+      "snippet": "2 days ago · What is the meaning of the name Sophia? Discover the origin, popularity, Sophia name meaning, and names related to Sophia with Mama Natural’s fantastic baby names guide.",
+      "domain": "www.mamanatural.com",
+      "score": 8,
+      "slots": [
+        "case_data"
+      ],
+      "matched_queries": [
+        "Sophia 公民身份 有法律效力吗 沙特 法律分析"
+      ],
+      "matched_questions": [
+        "Sophia 被授予沙特“公民身份”是否具有实质法律效力，还是更接近宣传性或象征性事件？"
+      ],
+      "reasons": [
+        "命中题目核心词；命中题目短语"
+      ]
+    },
+    {
+      "title": "Sophia 的名字的意思和来源 - etymonline",
+      "url": "https://www.etymonline.com/cn/word/Sophia",
+      "snippet": "4 days ago · Sophia 意思是: 智慧; 聪明; 理智 这个女性专有名词源自希腊语 sophia，意为“技能、知识、熟悉程度；明智的判断、实用的智慧；狡猾、精明；哲学”，也可以理解为“智慧的化身”。 它是从 …",
+      "domain": "www.etymonline.com",
+      "score": 8,
+      "slots": [
+        "case_data"
+      ],
+      "matched_queries": [
+        "Sophia 公民身份 有法律效力吗 沙特 法律分析"
+      ],
+      "matched_questions": [
+        "Sophia 被授予沙特“公民身份”是否具有实质法律效力，还是更接近宣传性或象征性事件？"
+      ],
+      "reasons": [
+        "命中题目核心词；命中题目短语"
+      ]
+    },
+    {
+      "title": "Sophia名字意思 | NameChef",
+      "url": "https://www.namechef.co/cn/sophia-name-meaning/",
+      "snippet": "名字意思 Sophia的中文译名为索菲亚，有智慧的意思，一般用作女生名字，源自希腊文。 Sophia的发音为So-fee-ya（下方可聆听真人发音），在《NameChef热门名字排行榜》中排名前750，在《2024美 …",
+      "domain": "www.namechef.co",
+      "score": 8,
+      "slots": [
+        "case_data"
+      ],
+      "matched_queries": [
+        "Sophia 公民身份 有法律效力吗 沙特 法律分析"
+      ],
+      "matched_questions": [
+        "Sophia 被授予沙特“公民身份”是否具有实质法律效力，还是更接近宣传性或象征性事件？"
+      ],
+      "reasons": [
+        "命中题目核心词；命中题目短语"
+      ]
+    },
+    {
+      "title": "Sophia（源自希腊语的女性名字，意为“智慧”）_百度百科",
+      "url": "https://baike.baidu.com/item/Sophia/17354157",
+      "snippet": "Sophia是源于希腊语Σοφíα的女性名字，中文译作“索菲娅”或“苏菲娅”，核心语义为“智慧”。 该名字在美国长期保持高流行度，2018年位列全美最受欢迎女生名第四位，此前连续八年蝉联榜首，2021年仍 …",
+      "domain": "baike.baidu.com",
+      "score": 8,
+      "slots": [
+        "case_data"
+      ],
+      "matched_queries": [
+        "Sophia 公民身份 有法律效力吗 沙特 法律分析"
+      ],
+      "matched_questions": [
+        "Sophia 被授予沙特“公民身份”是否具有实质法律效力，还是更接近宣传性或象征性事件？"
+      ],
+      "reasons": [
+        "命中题目核心词；命中题目短语"
+      ]
+    },
+    {
+      "title": "Quiz: How much do you know about Julius Caesar?",
+      "url": "https://www.folger.edu/blogs/shakespeare-and-beyond/quiz-how-much-do-you-know-about-julius-caesar/",
+      "snippet": "Sep 5, 2025 · In 2012 the Royal Shakespeare Company staged the first-ever, high-profile, all-black British Shakespeare production, Julius Caesar, set in Africa. The actor who played Brutus, Paterson …",
+      "domain": "www.folger.edu",
+      "score": 7,
+      "slots": [
+        "boundary"
+      ],
+      "matched_queries": [
+        "人工智能有自我意识吗 法哲学 法学观点"
+      ],
+      "matched_questions": [
+        "现有法哲学和法学论证中，人工智能是否已被认为具有自我意识、意思自治或真正主观能动性？"
+      ],
+      "reasons": [
+        "命中材料锚点"
+      ]
+    },
+    {
+      "title": "财税 [2017]37号文发布后，关于农产品抵扣，你需要知道这些",
+      "url": "https://www.shui5.cn/article/9f/112224.html",
+      "snippet": "May 8, 2026 · 财政部 国家税务总局新近颁布的《关于简并增值税税率有关政策的通知》（财税 [2017]37号），对购进的农产品适用税率及进项税抵扣办法均有较大调整。 今天小编就结合新旧政策 …",
+      "domain": "www.shui5.cn",
+      "score": 6,
+      "slots": [
+        "risk"
+      ],
+      "matched_queries": [
+        "人工智能自主决策超出人类预见 归责规则 怎么处理"
+      ],
+      "matched_questions": [
+        "当人工智能的自主决策超出开发者或使用者的可预见范围时，现有归责规则如何调整？"
+      ],
+      "reasons": [
+        "命中题目核心词；包含高价值证据信号"
+      ]
+    },
+    {
+      "title": "抖音网页版在线极速访问入口 抖音网页版无需登录直接浏览 ...",
+      "url": "https://www.php.cn/faq/1815440.html",
+      "snippet": "Dec 4, 2025 · 想要在线极速访问抖音网页版，并无需登录直接浏览精彩内容吗？ 方法非常简单。 抖音官方提供了网页版入口，让用户在电脑上也能享受沉浸式的短视频体验。 本文将为您详细介绍如何直 …",
+      "domain": "www.php.cn",
+      "score": 6,
+      "slots": [
+        "direct"
+      ],
+      "matched_queries": [
+        "人工智能是否应当拥有法律人格 学界主流观点"
+      ],
+      "matched_questions": [
+        "围绕主问题，当前中文法学讨论中对是否应赋予人工智能法律人格的主流结论是什么？"
+      ],
+      "reasons": [
+        "命中材料锚点；包含高价值证据信号"
+      ]
+    }
+  ],
+  "fetched_contents": [
+    {
+      "url": "https://12366.chinatax.gov.cn/nszx/onlinemessage/detail?id=eb1575e6a9774ad98d5470500fda2638",
+      "title": "农产品免税发票，如何抵扣进项税",
+      "slot": "risk",
+      "score": 16,
+      "reason": "命中题目核心词；包含高价值证据信号",
+      "matched_questions": [
+        "当人工智能的自主决策超出开发者或使用者的可预见范围时，现有归责规则如何调整？"
+      ],
+      "highlights": [
+        "从按照简易计税方法依照3%征收率计算缴纳增值税的小规模纳税人取得增值税专用发票的，以增值税专用发票上注明的金额和11%的扣除率计算进项税额;",
+        "您提交的问题已收悉，现针对您所提供的信息回复如下： 根据《国务院关于废止<中华人民共和国营业税暂行条例>和修改<中华人民共和国增值税暂行条例>的决定》（国令第691号）规定：第八条 纳税人购进货物、劳务、服务、无形资产、不动产支付或者负担的增值税额，为进项税额。",
+        "下列进项税额准予从销项税额中抵扣： (三)购进农产品，除取得增值税专用发票或者海关进口增值税专用缴款书外，按照农产品收购发票或者销售发票上注明的农产品买价和11%的扣除率计算的进项税额，国务院另有规定的除外。",
+        "…… (六)《中华人民共和国增值税暂行条例》第八条第二款第(三)项和本通知所称销售发票，是指农业生产者销售自产农产品适用免征增值税政策而开具的普通发票。"
+      ],
+      "content": "智能咨询\n首页\n北京市\n[切换]\n我的收藏\n好友申请\n我的消息\n注册\n登录\n用户名称\n个人中心\n退出\n农产品免税发票，如何抵扣进项税\n留言时间：\nSat Jun 29 14:51:56 CST 2024\n纳税人所属地\n问题内容\n增值税一般纳税人购进农产品，取得（开具）农产品销售发票或收购发票的，以农产品销售发票或收购发票上注明的农产品买价和9%的扣除率计算进项税额。举例，我公司采购农民自己种的农产品花费100元，取得农民开具的免税发票，我们抵扣多少进项税？\n附件\n答复机构\n答复时间\n答复内容\n您好！您提交的问题已收悉，现针对您所提供的信息回复如下： 根据《国务院关于废止<中华人民共和国营业税暂行条例>和修改<中华人民共和国增值税暂行条例>的决定》（国令第691号）规定：第八条 纳税人购进货物、劳务、服务、无形资产、不动产支付或者负担的增值税额，为进项税额。 下列进项税额准予从销项税额中抵扣： (三)购进农产品，除取得增值税专用发票或者海关进口增值税专用缴款书外，按照农产品收购发票或者销售发票上注明的农产品买价和11%的扣除率计算的进项税额，国务院另有规定的除外。进项税额计算公式： 进项税额=买价×扣除率 根据《财政部 国家税务总局关于简并增值税税率有关政策的通知》（财税〔2017〕37号）规定：二、纳税人购进农产品，按下列规定抵扣进项税额： (一)除本条第(二)项规定外，纳税人购进农产品,取得一般纳税人开具的增值税专用发票或海关进口增值税专用缴款书的，以增值税专用发票或海关进口增值税专用缴款书上注明的增值税额为进项税额;从按照简易计税方法依照3%征收率计算缴纳增值税的小规模纳税人取得增值税专用发票的，以增值税专用发票上注明的金额和11%的扣除率计算进项税额;取得(开具)农产品销售发票或收购发票的，以农产品销售发票或收购发票上注明的农产品买价和11%的扣除率计算进项税额。 …… (六)《中华人民共和国增值税暂行条例》第八条第二款第(三)项和本通知所称销售发票，是指农业生产者销售自产农产品适用免征增值税政策而开具的普通发票。 根据《财政部 税务总局关于调整增值税税率的通知》（财税〔2018〕32号）规定：二、纳税人购进农产品，原适用11%扣除率的，扣除率调整为10%。 根据《财政部 税务总局 海关总署关于深化增值税改革有关政策的公告》（财政部 税务总局 海关总署公告2019年第39号）规定：二、纳税人购进农产品，原适用10%扣除率的，扣除率调整为9%。纳税人购进用于生产或者委托加工13%税率货物的农产品，按照10%的扣除率计算进项税额。 感谢您的咨询！您的问题已通过电话形式回复。上述回复仅供参考，若您对此仍有疑问，请联系河北税务12366或主管税务机关。\n+1\n收藏\n你可能关注的\n换一换\nX\n您即将离开12366纳税服务平台网站，\n是否继续？\n继续访问\n放弃\nX\n分享到\n- 微信"
+    },
+    {
+      "url": "https://www.behindthename.com/name/sophia",
+      "title": "Meaning, origin and history of the name Sophia",
+      "slot": "case_data",
+      "score": 10,
+      "reason": "命中题目核心词；命中题目短语；命中材料锚点",
+      "matched_questions": [
+        "Sophia 被授予沙特“公民身份”是否具有实质法律效力，还是更接近宣传性或象征性事件？"
+      ],
+      "highlights": [
+        "Gender Feminine",
+        "Scripts Σοφία(Greek)",
+        "Meaning & History",
+        "Means \"wisdom\" in Greek. This was the name of an early, probably mythical, saint who died of grief after her three daughters were martyred during the reign of the emperor Hadrian. Legends about her probably arose as a result of a medieval misunderstanding of the phrase Hagia Sophia \"Holy Wisdom\", which is the name of a large basilica in Constantinople.This name was common among continental European royalty during the Middle Ages, and it was popularized in Britain by the German House of Hanover when they inherited the British throne in the 18th century. It was the name of characters in the novels Tom Jones (1749) by Henry Fielding and The Vicar of Wakefield (1766) by Oliver Goldsmith.In the United States this name was only moderately common until the 1990s when it began rising in popularity, eventually becoming the most popular for girls from 2011 to 2013. A famous bearer is the Italian actress Sophia Loren (1934-)."
+      ],
+      "content": "Gender Feminine\nScripts Σοφία(Greek)\nPronounced Pron. /soʊ.ˈfi.ə/(English) /sə.ˈfaɪ.ə/(British English) /so.ˈfi.a/(Greek) /zo.ˈfiː.a/(German) [key·simplify]\nMeaning & History\nMeans \"wisdom\" in Greek. This was the name of an early, probably mythical, saint who died of grief after her three daughters were martyred during the reign of the emperor Hadrian. Legends about her probably arose as a result of a medieval misunderstanding of the phrase Hagia Sophia \"Holy Wisdom\", which is the name of a large basilica in Constantinople.This name was common among continental European royalty during the Middle Ages, and it was popularized in Britain by the German House of Hanover when they inherited the British throne in the 18th century. It was the name of characters in the novels Tom Jones (1749) by Henry Fielding and The Vicar of Wakefield (1766) by Oliver Goldsmith.In the United States this name was only moderately common until the 1990s when it began rising in popularity, eventually becoming the most popular for girls from 2011 to 2013. A famous bearer is the Italian actress Sophia Loren (1934-).\nRelated Names\nRootsophia\nOther Languages & CulturesSofi, Sofya(Armenian) Sofia, Sofiya(Bulgarian) Sofia, Sònia(Catalan) Sofija, Sonja(Croatian) Sofie, Žofie, Soňa(Czech) Sofia, Sofie, Sonja, Vivi(Danish) Sofia, Viivi(Estonian) Sofia, Sohvi, Sonja, Viivi(Finnish) Sophie(French) Sofía(Galician) Sopia, Sopio(Georgian) Szofi, Zsófia, Szófia, Szonja, Zsófika, Zsóka(Hungarian) Soffía, Sonja(Icelandic) Sofia, Sonia(Italian) Sofija(Latvian) Zofija, Sofija(Lithuanian) Sofija, Sonja(Macedonian) Sofia, Sofie, Sonja, Vivi(Norwegian) Zofia, Sonia, Zosia(Polish) Sofia, Sonia(Portuguese) Sofia, Sonia(Romanian) Sofia, Sofiya, Sofya, Sonya(Russian) Sofija, Sonja(Serbian) Sofia, Žofia, Soňa(Slovak) Sofija, Zofija, Sonja(Slovene) Sofía, Sofi, Sonia(Spanish) Sofia, Sofie, Sofi, Sonja, Vivi(Swedish) Sofia, Sofiia, Sofiya(Ukrainian)\nPopularity\nPeople think this name is\nName Days\nImages\nAltered image depicting how Hagia Sophia basilica may have looked before it became a mosque\nCategories\n2000s2010sAncient Greek wordsAngelina Ballerina charactersasteroidsBarbie's rolesBritish consortsBritish royal familyBrooklyn 99 characterschild actorsClaymore characterscricketersD.Gray-man charactersDate Everything charactersEdinburgh SevenempressesEnglish princessesFire Emblem charactersGranblue Fantasy charactersHouse of Anubis charactersHouse of Cards US charactersintellectintelligenceisogramsit girlsJane Austen charactersJESC namesJulie Chan is Dead charactersKennedy familylegendLeo Tolstoy charactersliteraturemedievalMegami Tensei charactersmothersmythologynever out of the US top 1000Oliver Goldsmith charactersOrange is the New Black charactersOrthodox saintsPhilip K. Dick charactersprincessesProfessor Layton charactersPunishing Gray Raven charactersRainbow Magic Fairy charactersReverse 1999 charactersRighteous Among the Nationsrose varietiesroyaltysaintsSims 3 charactersSix Feet Under characterssong titlesSousei No Aquarion charactersSquishmallowsStar Ocean charactersSuikoden charactersTaylor Swift songsThe Fosters charactersThe Four Hundred membersThe Golden Girls charactersThe Loud House charactersThe Marvelous Mrs. Maisel charactersThe Rolling Stones songsThe Sopranos charactersThe Walking Dead charactersThe West Wing charactersTomb Raider characterstop 10 in Australiatop 10 in Austriatop 10 in Germanytop 10 in Greecetop 10 in Hawaiitop 10 in Malaysiatop 10 in New Zealandtop 10 in Northern Irelandtop 10 in Singaporetop 10 in Switzerlandtop 10 in the Philippinestop 10 in the UKtop 10 in the USTori Amos lyricsVirtua Tennis opponent charactersvirtuesWestworld charactersWii Sports Club opponent MiisWii Sports series opponent MiisWilliam Faulkner characterswisdomwives of Joseph Smithwomen's historyXeno characters\nSources & References\n- Lexicon of Greek Personal Names, available from https://search.lgpn.ox.ac.uk/browse.html?facet-nymRef=Σοφία."
+    },
+    {
+      "url": "https://en.oicq88.com/sophia.html",
+      "title": "Sophia英文名 Sophia名字含义 英文名",
+      "slot": "case_data",
+      "score": 10,
+      "reason": "命中题目核心词；命中题目短语；命中材料锚点",
+      "matched_questions": [
+        "Sophia 被授予沙特“公民身份”是否具有实质法律效力，还是更接近宣传性或象征性事件？"
+      ],
+      "highlights": [
+        "数据更新时间：2025-12-08 14:20:10",
+        "Sophia在美国的年度排名数据",
+        "英格兰、法国、葡萄牙和匈牙利都有皇家的伊莎贝拉。",
+        "| Charlotte | 夏洛特 | 女生 | 法语 | “查尔斯”的女性形式，意为“娇小”和“女性化”。"
+      ],
+      "content": "Sophia\nSophia英文名信息\n英文名字：Sophia\nSophia中文名字：索非亚\nSophia性别倾向：女\nSophia来源语种：希腊语（Greek）\nSophia发音音标：美式发音 [soh-FEE-ah] 英式发音 [soh-FIE-ah]\nSophia性格特征：经典、高雅、火热\nSophia名字寓意：来自希腊语，意为“智慧”。这个名字在中世纪被欧洲皇室使用。常见变体有：Sophie, Sofia。著名的索非亚包括导演索菲亚·科波拉、演员索菲娅·洛伦和索菲亚·维加拉。\nSophia的含义：\nSophia这个名字源自希腊语，意为\"智慧\"。它代表着聪明、智慧和优雅。Sophia是一个充满智慧和温暖的名字，它给人一种聪颖和独立的感觉。选择Sophia作为名字，可以让人联想到睿智和美好的未来，是一个富有正能量和魅力的选项。无论是在职场还是生活中，拥有Sophia这个名字的人都会展现出自信和智慧，成为身边人的良师益友。\nSophia在美国的人气\n数据更新时间：2025-12-08 14:20:10\n最近几年每百万人中男生、女生叫Sophia的人数\n2025年：在每百万人中，男生叫Sophia的人数为10人，女生叫Sophia的人数为7309人。\n2024年：在每百万人中，男生叫Sophia的人数为16人，女生叫Sophia的人数为5995人。\n2023年：在每百万人中，男生叫Sophia的人数为15人，女生叫Sophia的人数为5699人。\n2022年：在每百万人中，男生叫Sophia的人数为11人，女生叫Sophia的人数为6143人。\nSophia在美国的年度排名数据\n| Sophia（男性） | Sophia（女性） | |\n|---|---|---|\n| 年份 | 排行 百分比 | 排行 百分比 |\n| 2025 |\n#10320\n0.00109340\n|\n#3\n0.73099830\n|\n| 2024 |\n#4464\n0.00166100\n|\n#4\n0.59953630\n|\n| 2023 |\n#4628\n0.00153610\n|\n#4\n0.56991650\n|\n| 2022 |\n#5472\n0.00119070\n|\n#5\n0.61438770\n|\n| 2021 |\n#8707\n0.00061270\n|\n#5\n0.65374000\n|\n| 2020 |\n#5555\n0.00114410\n|\n#1\n0.69100390\n|\n| 2019 |\n#5068\n0.00131080\n|\n#1\n0.74549130\n|\n| 2018 |\n#1017\n0.01168650\n|\n#1\n0.75088020\n|\nSophia相似的英文名\n| 英文名 | 中文名音译 | 性别 | 来源 | 名字含义 |\n|---|---|---|---|---|\n| Isabella | 伊莎贝拉 | 女生 | 希伯来语 | 伊莎贝拉是伊莎贝尔的变体，伊莎贝尔本身是伊丽莎白的变体，在希伯来语中意为\"奉献给上帝\"。英格兰、法国、葡萄牙和匈牙利都有皇家的伊莎贝拉。昵称：贝拉，伊茲，伊茲。著名的伊莎贝拉：演员伊莎贝拉·罗塞里尼。 |\n| Olivia | 奥利维亚 | 女生 | 希腊语 | 奥利维亚这一名字最早由威廉·莎士比亚在《第十二夜》中用来指一个角色。它是奥利弗的女性形式，意为“橄榄树”。著名的奥利维亚包括歌手奥利维亚·纽顿-约翰、《丑闻》中的奥利维亚·波普、以及大受欢迎的儿童读物系列中的小猪。 |\n| Sofia | 索菲娅 | 女生 | 意大利语 | SOPHIA的变体。见SOPHIE。 |\n| Emma | 艾玛 | 女生 | 德语 | 源自古德语，意为“整体”或“普遍”，自19世纪以来广受欢迎。著名的艾玛包括简·奥斯汀的小说《艾玛》中的主人公；演员艾玛·汤普森、艾玛·斯通和艾玛·沃特森。 |\n| Ava | 阿娃 | 女生 | 德语 | 是Eve的变体。可能源自拉丁语“avis”，意为“鸟”。也可能是名字Chava（“生命”或“活着的人”）的缩略形式，Chava是Eve的希伯来语形式。这个名字因女演员Ava Gardner而流行。 |\n| Mia | 米娅 | 女生 | 拉丁语 | Maria的缩写，由女演员Mia Farrow受欢迎。其拉丁语起源意为'我的'或'期望中的孩子'。其他著名的Mia包括Kate Winslet的女儿。 |\n| Amelia | 亚美利亚 | 女生 | 拉丁语 | 中古时期Emilia和Amalia两个名字的结合。在拉丁语中，意思是“勤奋”和“奋斗”。在日耳曼语中的意思是“保护者”。著名的亚美利亚人包括：飞行员阿梅利亚·埃尔哈特；《亚梅利亚·贝德里亚》儿童书系列的主角。 |\n| Sophie | 索菲 | 女生 | 希腊语 | 智慧 |\n| Charlotte | 夏洛特 | 女生 | 法语 | “查尔斯”的女性形式，意为“娇小”和“女性化”。在皇室中是常见的名字。著名的夏洛特包括：小说家夏洛特·勃朗特；《夏洛特的网》中的蜘蛛朋友威尔伯；《欲望都市》中的角色。 |\n| Ella | 艾拉 | 女生 | 英语 | 爱莲娜（Eleanor）和艾伦（Ellen）的简称，意为“光明”。它在英语中也可以意味着“美丽的仙女”以及德语中的“全部”或“其他”。 |\n| Chloe | 克洛伊 | 女生 | 希腊语 | 来源于希腊语“Khloe”，用于代表Demeter，即生育女神。在新约中，克洛伊是圣保罗的信徒。这个名字的意思是“盛开”或“年轻的嫩芽”。著名的克洛伊包括演员Chloë Sevigny和Khloé Kardashian。 |\n| Harper | 哈珀 | 女生 | 匈牙利语 | 原为姓氏，意为弹奏竖琴的人。著名人物包括：哈珀·李（《杀死一只知更鸟》的作者）、保罗·西蒙的儿子、尼尔·帕特里克·哈里斯的女儿。 |\nSophia女性相关英文名\n| 英文名 | 中文名音译 | 性别 | 来源 | 名字含义 |\n|---|---|---|---|---|\n| Sophie | 索菲 | 女生 | 希腊语 | 智慧 |\n| Olivia | 奥利维亚 | 女生 | 希腊语 | 奥利维亚这一名字最早由威廉·莎士比亚在《第十二夜》中用来指一个角色。它是奥利弗的女性形式，意为“橄榄树”。著名的奥利维亚包括歌手奥利维亚·纽顿-约翰、《丑闻》中的奥利维亚·波普、以及大受欢迎的儿童读物系列中的小猪。 |\n| Isabella | 伊莎贝拉 | 女生 | 希伯来语 | 伊莎贝拉是伊莎贝尔的变体，伊莎贝尔本身是伊丽莎白的变体，在希伯来语中意为\"奉献给上帝\"。英格兰、法国、葡萄牙和匈牙利都有皇家的伊莎贝拉。昵称：贝拉，伊茲，伊茲。著名的伊莎贝拉：演员伊莎贝拉·罗塞里尼。 |\n| Emma | 艾玛 | 女生 | 德语 | 源自古德语，意为“整体”或“普遍”，自19世纪以来广受欢迎。著名的艾玛包括简·奥斯汀的小说《艾玛》中的主人公；演员艾玛·汤普森、艾玛·斯通和艾玛·沃特森。 |\n| Ava | 阿娃 | 女生 | 德语 | 是Eve的变体。可能源自拉丁语“avis”，意为“鸟”。也可能是名字Chava（“生命”或“活着的人”）的缩略形式，Chava是Eve的希伯来语形式。这个名字因女演员Ava Gardner而流行。 |\n| Mia | 米娅 | 女生 | 拉丁语 | Maria的缩写，由女演员Mia Farrow受欢迎。其拉丁语起源意为'我的'或'期望中的孩子'。其他著名的Mia包括Kate Winslet的女儿。 |\n| Amelia | 亚美利亚 | 女生 | 拉丁语 | 中古时期Emilia和Amalia两个名字的结合。在拉丁语中，意思是“勤奋”和“奋斗”。在日耳曼语中的意思是“保护者”。著名的亚美利亚人包括：飞行员阿梅利亚·埃尔哈特；《亚梅利亚·贝德里亚》儿童书系列的主角。 |\n| Samantha | 莎曼珊塔 | 女生 | 美国英语 | 听众 |\n| Emily | 艾米莉 | 女生 | 条顿语 | 源自拉丁名Aemilia，意为“奋斗”，“渴望”。该名字自20世纪70年代以来一直很流行。著名的艾米莉包括：艾米莉·勃朗特（Emily Brontë）；艾米莉·狄金森（Emily Dickinson）；女演员艾米莉·布朗特（Emily Blunt）和艾米莉·德尚奈尔（Emily Deschanel）。 |\n| Abigail | 阿比盖尔 | 女生 | 希伯来语 | 希伯来语中的“父亲的喜悦”。在圣经中，阿比盖尔是大卫王聪明美丽的第三个妻子。由于圣经中的阿比盖尔将自己描述为大卫王的侍女，这个名字经常被赋予文学作品中的女仆角色。 |\n| Victoria | 维多利亚 | 女生 | 拉丁语 | 胜利 |\n| Grace | 格蕾丝 | 女生 | 拉丁语 | 善良和慷慨。拉丁将其与“上帝的恩典”联系起来，希腊神话则与美丽、绽放和欢乐相关。知名的格蕾丝有：Grace Kelly，摩纳哥公主和女演员；歌手Grace Jones和Grace Slick。 |\nSophia男性相关英文名\n| 英文名 | 中文名音译 | 性别 | 来源 | 名字含义 |\n|---|---|---|---|---|\n| Noah | 诺亚 | 男生 | 希伯来语 | 希伯来名字，意为“安息”和“舒适”。在著名的圣经故事中，上帝选择诺亚建造方舟，装满食物和每种动物的一对，以在大洪水中幸存下来。著名的诺亚有：演员诺亚·怀尔；比利·雷·赛勒斯的女儿。 |\n| Jacob | 雅各布 | 男生 | 希伯来语 | 译自希伯来语，“篡改者”。雅各布是一个重要的圣经先祖，他是以色列的12个部落的父亲。雅各布长期以来一直是一个受欢迎的犹太名字，并且在美国连续30多年跻身前100名的名字。绰号：杰克。 |\n| Ethan | 伊桑 | 男生 | 希伯来语 | 希伯来语中意为“强大”，“安全”，“坚定”。在圣经中，伊桑是一位智慧的人（但不如所罗门聪明）。著名的伊桑包括演员伊桑·霍克，导演伊桑·科恩，革命家伊桑·艾伦，以及伊迪丝·华顿小说《伊桑·弗罗姆》中的角色。 |\n| Joshua | 约书亚 | 男生 | 希伯来语 | 主是拯救者 |\n| Nicholas | 尼古拉斯 | 男生 | 希腊语 | 人民的胜利 |\n| Benjamin | 本杰明 | 男生 | 希伯来语 | 《圣经》中雅各布的12个儿子中最小的一个。意为“南方之子”，可能也指“我年老的儿子”。著名的本杰明有：本杰明·富兰克林；记者本·布拉德利；《毕业生》中达斯汀·霍夫曼饰演的角色。 |\n| Alexander | 亚历山大 | 男生 | 希腊语 | 古希腊语中意为“人民的捍卫者”。自古希腊时期以来，无数以亚历山大命名的国王和皇帝统治了世界。著名的亚历山大有：亚历山大大帝；开国之父亚历山大·汉密尔顿。 |\n| Michael | 迈克尔 | 男生 | 希伯来语 | Who is like God? 这个名字源自希伯来语。在圣经中，圣迈克尔率领天使对抗撒旦的军队，并成为士兵的守护圣人。自20世纪40年代以来，这个名字在美国一直很受欢迎，尽管近年来其流行度有所下降。 |\n| Matthew | 马修 | 男生 | 希伯来语 | 来自希伯来名字Matityahu，意为“上帝的礼物”。马修是耶稣的一位使徒，也是新约中第一本福音书的作者。自20世纪60年代以来，这个名字一直很受欢迎。 |\n| Joseph | 约瑟夫 | 男生 | 希伯来语 | 上帝将（另一个儿子）增加 |\n| Samuel | 塞缪尔 | 男生 | 希伯来语 | 来自希伯来语“听到上帝”或“向上帝请示”。在圣经中，塞缪尔是一位先知和法官，建立了希伯来君主制度。著名的塞缪尔包括：爱尔兰作家塞缪尔·贝克特；演员塞缪尔·杰克逊。 |\n| Gabriel | 加百利 | 男生 | 希伯来语 | 在希伯来语中意为\"奉献于上帝\"，\"上帝的英雄\"或\"上帝是我的力量\"。在圣经中，加百利是告诉玛丽亚她将生育上帝之子的天使。著名的加百利有：作家加百利·加西亚·马尔克斯和演员加布里埃尔·伯恩。 |"
+    },
+    {
+      "url": "https://www.folger.edu/blogs/shakespeare-and-beyond/quiz-how-much-do-you-know-about-julius-caesar/",
+      "title": "Quiz: How much do you know about Julius Caesar?",
+      "slot": "boundary",
+      "score": 7,
+      "reason": "命中材料锚点",
+      "matched_questions": [
+        "现有法哲学和法学论证中，人工智能是否已被认为具有自我意识、意思自治或真正主观能动性？"
+      ],
+      "highlights": [
+        "Julius Caesar brings to vivid life a story that took place more than 2000 years ago. It is also filled with a wealth of memorable lines–among them, Mark Antony’s brilliant political speech that begins “Friends, Romans, countrymen.” But how well do you know the details of what takes place: the different characters, the events that lead to Caesar’s death, and everything that occurs after that?",
+        "Try out our quiz about the play.",
+        "Quiz Maker – powered by Riddle",
+        "Would you like to know more about Julius Caesar?"
+      ],
+      "content": "Julius Caesar brings to vivid life a story that took place more than 2000 years ago. It is also filled with a wealth of memorable lines–among them, Mark Antony’s brilliant political speech that begins “Friends, Romans, countrymen.” But how well do you know the details of what takes place: the different characters, the events that lead to Caesar’s death, and everything that occurs after that? Try out our quiz about the play.\nQuiz Maker – powered by Riddle\nWould you like to know more about Julius Caesar? Look for a synopsis and the full text on our website, available for free from the Folger Shakespeare, and still more about the play, including images, podcast episodes, blog posts, and more. Check out the Folger paperback edition of Julius Caesar, too. We’d also love to welcome you to the Folger Shakespeare Library, where you can see and enjoy much more about Shakespeare, his works, and his world through the Folger’s extraordinary exhibition spaces and our historic theater.\nKeep exploring\nPaterson Joseph: Julius Caesar and Me\nIn 2012 the Royal Shakespeare Company staged the first-ever, high-profile, all-black British Shakespeare production, Julius Caesar, set in Africa. The actor who played Brutus, Paterson Joseph, wrote a book about the experience. He also talks about his early work, his thoughts about race in the British theater, about the proper way to play Brutus, and much more.\nDirector Rosa Joshi on Julius Caesar Today\nRosa Joshi’s bold staging of Julius Caesar at the Oregon Shakespeare Festival, performed entirely by women and nonbinary actors, reframes Shakespeare’s political thriller for today’s fight against autocracy.\nOrder It: Mark Antony's \"Friends, Romans, countrymen\"\nInterested in politics and communication? Try our quiz and rearrange the lines of Mark Antony’s “Friends, Romans, countrymen” speech from Julius Caesar, a famous passage from Shakespeare’s plays and a brilliant example of political oratory.\nStay connected\nEnter your email address to follow this blog and receive notifications of new posts by email."
+    },
+    {
+      "url": "https://www.php.cn/faq/1815440.html",
+      "title": "抖音网页版在线极速访问入口 抖音网页版无需登录直接浏览 ...",
+      "slot": "direct",
+      "score": 6,
+      "reason": "命中材料锚点；包含高价值证据信号",
+      "matched_questions": [
+        "围绕主问题，当前中文法学讨论中对是否应赋予人工智能法律人格的主流结论是什么？"
+      ],
+      "highlights": [
+        "视频右侧会实时显示点赞、评论和分享数量等互动数据，让您随时了解视频的热度。",
+        "1、 TikTok（抖音国际版）官网☜☜☜☜☜点击进入[/shoudongurl]",
+        "2、 [shoudongurl]抖音极速版（领红包）入口☜☜☜☜☜点击进入",
+        "想要在线极速访问抖音网页版，并无需登录直接浏览精彩内容吗？"
+      ],
+      "content": "想要在线极速访问抖音网页版，并无需登录直接浏览精彩内容吗？方法非常简单。抖音官方提供了网页版入口，让用户在电脑上也能享受沉浸式的短视频体验。本文将为您详细介绍如何直接访问并使用其核心功能。\n1、 TikTok（抖音国际版）官网☜☜☜☜☜点击进入[/shoudongurl]\n2、 [shoudongurl]抖音极速版（领红包）入口☜☜☜☜☜点击进入\n平台访问与基础操作\n将官方网址输入浏览器地址栏并回车，即可直接进入抖音网页版的主界面。\n网页版的一大优势是无需登录即可浏览公开的热门视频和推荐内容，大大简化了访问流程。\n您可以通过页面顶部的导航栏，轻松切换到直播、同城或您感兴趣的其他分类模块。\n利用顶部的搜索框，可以输入关键词来快速查找特定的视频内容或创作者，提升浏览效率。\n只需滚动鼠标滑轮，新的视频内容就会不断加载，系统会根据您的观看偏好进行智能推荐。\n内容呈现形式特点\n内容以经典的竖屏模式呈现，完美适配了移动端的创作格式，让您在电脑大屏上也能获得原汁原味的观看体验。\n视频会自动循环播放，并且在当前视频结束后无缝切换到下一条，保证了观看的连续性和流畅感。\n视频右侧会实时显示点赞、评论和分享数量等互动数据，让您随时了解视频的热度。\n您可以使用键盘的上下方向键来快速切换上一个或下一个视频，操作非常便捷。\n部分视频会带有商品或位置信息标签，这些信息以叠加方式展示，不会干扰主要的播放画面。\n跨设备协同功能\n如果您在手机上看到喜欢的视频，可以复制其链接，然后在电脑的网页版上直接粘贴打开进行观看。\n如果您选择扫码登录，网页版可以同步您账户的收藏夹和关注列表，实现跨设备的统一管理。\n在未登录状态下浏览，您的观看行为不会被记录到历史中，有效保护了个人隐私。\n网页版支持投屏功能，您可以轻松将正在播放的视频投射到智能电视等大屏幕设备上，与家人朋友共享。\n您可以方便地将任何视频以卡片形式分享到其他社交媒体平台，分享内容会带有动态预览效果。"
+    }
+  ],
+  "cache_stats": {
+    "search_hits": 0,
+    "search_misses": 15,
+    "fetch_hits": 0,
+    "fetch_misses": 6,
+    "filtered_out": 75,
+    "queries": 15,
+    "selected_results": 6,
+    "fetched_results": 5,
+    "unique_domains": 6
+  }
+}

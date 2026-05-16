@@ -4,6 +4,23 @@ __pycache__/
 .vscode/
 .venv/
 venv/
+.venv13/
 outputs/pdf/
 competition/deploy/searxng/.env
 competition/deploy/searxng/core-config/
+
+# Environment files (contain secrets)
+.env
+.env.*
+!.env.example
+
+# Claude Code settings (local config only)
+.claude/
+
+# Shared search/fetch caches (may contain scraped API keys)
+**/outputs/_bocha_search_cache/
+final/workspace/shared_cache/
+competition_match/outputs/shared_cache/
+
+# IDE
+.obsidian/

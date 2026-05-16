@@ -16,11 +16,13 @@ class GPTMessagesClient:
         return f"{self.config.base_url}/v1/messages"
 
     def call(self, *, model: str, system: str, user: str, max_tokens: int) -> str:
+        budget_tokens = max_tokens - 2000 if max_tokens > 4000 else max_tokens // 2
         payload = {
             "model": model,
             "max_tokens": max_tokens,
             "system": system,
             "messages": [{"role": "user", "content": user}],
+            "thinking": {"type": "enabled", "budget_tokens": budget_tokens},
         }
         request = urllib.request.Request(
             self._api_url(),

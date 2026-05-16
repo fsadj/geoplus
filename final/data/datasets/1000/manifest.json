@@ -1,0 +1,8 @@
+{
+  "dataset_id": 1000,
+  "match_dataset_id": 1000,
+  "legacy_dataset_id": 1000,
+  "title": "稳定性测试（同DS 201，无问题）",
+  "source_dir": "/Users/brazion/Desktop/geoplus/competition_match/data/1000",
+  "question_present": true
+}

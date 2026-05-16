@@ -30,6 +30,7 @@ ROUTE_COLORS = {
     "after_novelty_gap": "#0ea5e9",
     "after_query_anchored_novelty_gap": "#7c3aed",
     "after_coverage_floor": "#22c55e",
+    "after_simulator_consensus": "#0f766e",
     "after_anchored_novelty_with_coverage_floor": "#f97316",
 }
 DISPLAY_LABELS = {
@@ -40,6 +41,7 @@ DISPLAY_LABELS = {
     "after_novelty_gap": "Novelty Gap",
     "after_query_anchored_novelty_gap": "Anchored Novelty",
     "after_coverage_floor": "Coverage Floor",
+    "after_simulator_consensus": "Simulator Consensus",
     "after_anchored_novelty_with_coverage_floor": "Anchored + Floor",
 }
 
